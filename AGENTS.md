@@ -9,6 +9,7 @@ This is a static study site for a middle-school MATHCOUNTS student. GitHub Pages
 - No em-dashes and no emojis anywhere. Use a colon, a comma or two sentences instead.
 - Write special characters as HTML entities (`&minus;`, `&times;`, `&deg;`, `&radic;`, `&sup2;`). The locked solutions page requires ASCII-only source.
 - Keep links relative so the site works both from `file://` and on GitHub Pages.
+- Every geometry solution shows figures. Draw an inline SVG of the shape inside the solution steps, and label it with the unknowns the steps use (`w`, `4w`, `h`, `k`, `a`, `c`, `?`). Mark right angles with a small square. Draw a second figure once the unknowns are found, with the values filled in. Wrap each one as `<div class="figure">...<p class="figcap">caption</p></div>` and say "Not to scale" when it is not. This applies to problem set pages, their print copies and the question bank solutions.
 
 ## Adding a problem set
 

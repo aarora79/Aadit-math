@@ -354,3 +354,8 @@ details.reveal[open] { background: var(--yellow-pale); }
 details.reveal > summary { cursor: pointer; font-weight: 600; color: var(--teal); font-size: 16px; }
 details.reveal > .card { margin-top: 12px; }
 details.reveal > p { margin: 10px 0 2px; }
+
+/* Labeled figures inside solution steps */
+.figure { margin: 12px 0 4px; text-align: center; }
+.figure svg { max-width: 100%; height: auto; background: #FFFFFF; border: 1px solid var(--rule); border-radius: 6px; padding: 6px; }
+.figcap { font-size: 13px; color: #5A6E6D; margin: 6px 0 0; }
