@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Problem set 2 &middot; MATHCOUNTS concept cards</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <p class="eyebrow">MATHCOUNTS 2026 &middot; Problem set 2</p>
+  <h1>Four concept cards</h1>
+  <p style="margin-top:10px">One card per problem. Each card holds the idea and nothing else, so it works on any problem of that kind. Click a card for the worked solution.</p>
+  <p style="font-size:14px"><a href="print/index.html" style="color:var(--teal);font-weight:600;text-decoration:none">A4 print versions &rarr;</a> &nbsp; <a href="../index.html" style="color:var(--teal);font-weight:600;text-decoration:none">All problem sets</a></p>
+
+  <div class="grid">
+
+    <a class="cardlink" href="01-ages.html">
+      <div class="card">
+        <div class="card-head"><span class="card-num">01</span><span class="card-title">One letter for every age</span></div>
+        <p>Pick one unknown, usually the younger person's age <strong>now</strong>. Write every other age with that same letter. &ldquo;Eight years ago&rdquo; means subtract 8 from <em>both</em> people.</p>
+        <table>
+          <tr><th></th><th>Bob</th><th>Aerith</th></tr>
+          <tr><td>now</td><td>b</td><td>2b</td></tr>
+          <tr><td>8 years ago</td><td>b &minus; 8</td><td>2b &minus; 8</td></tr>
+        </table>
+        <div class="card-tip">A square in the problem gives you a quadratic, so expect two answers. Use the extra clue to throw one away, then check which person the question asks about.</div>
+        <span class="card-go">Aerith and Bob &rarr;</span>
+      </div>
+    </a>
+
+    <a class="cardlink" href="02-special-triangles.html">
+      <div class="card">
+        <div class="card-head"><span class="card-num">02</span><span class="card-title">A diagonal cuts out special triangles</span></div>
+        <p>Add up the angles at each end of the diagonal. If a triangle's two known angles make 90&deg;, its third angle is a <strong>right angle</strong> and the diagonal is the hypotenuse.</p>
+        <svg viewBox="0 0 200 240" width="140" height="168" role="img" aria-label="Quadrilateral split by a diagonal into a 30-60-90 triangle and a 45-45-90 triangle">
+          <polygon points="40,220 40,46.8 140,46.8" style="fill:var(--teal-pale);stroke:var(--ink);stroke-width:2"/>
+          <polygon points="40,220 140,46.8 176.6,183.4" style="fill:var(--yellow);stroke:var(--ink);stroke-width:2"/>
+          <line x1="40" y1="220" x2="140" y2="46.8" style="stroke:var(--ink);stroke-width:2;stroke-dasharray:6 4"/>
+          <rect x="40" y="46.8" width="12" height="12" style="fill:none;stroke:var(--ink);stroke-width:1.5"/>
+          <text x="44" y="186" font-size="15" font-family="monospace">30&deg;</text>
+          <text x="66" y="214" font-size="15" font-family="monospace">45&deg;</text>
+          <text x="98" y="66" font-size="15" font-family="monospace">60&deg;</text>
+          <text x="140" y="84" font-size="15" font-family="monospace">45&deg;</text>
+          <text x="60" y="130" font-size="16" font-family="monospace" font-weight="700">26</text>
+        </svg>
+        <div class="card-tip">30-60-90 sides go 1 : &radic;3 : 2. 45-45-90 sides go 1 : 1 : &radic;2. Find each triangle's area on its own, then add.</div>
+        <span class="card-go">The quadrilateral &rarr;</span>
+      </div>
+    </a>
+
+    <a class="cardlink" href="03-unit-price.html">
+      <div class="card">
+        <div class="card-head"><span class="card-num">03</span><span class="card-title">Price per piece is cost divided by count</span></div>
+        <p>Change dollars to <strong>cents</strong> first, then divide by the number of pieces each person paid for. Now the two prices are in the same unit and you can subtract.</p>
+        <div class="bars">
+          <div class="row"><span class="lab" style="width:66px">Matthew</span><span class="seg" style="width:160px;background:var(--teal-pale)"></span><span class="lab" style="width:auto">16&cent;</span></div>
+          <div class="row"><span class="lab" style="width:66px">Darren</span><span class="seg" style="width:200px;background:var(--yellow)"></span><span class="lab" style="width:auto">20&cent;</span></div>
+        </div>
+        <div class="card-tip">Ignore what nobody paid for. The 25 pieces Matthew ate do not change what each piece cost him.</div>
+        <span class="card-go">Matthew's candy &rarr;</span>
+      </div>
+    </a>
+
+    <a class="cardlink" href="04-similar-areas.html">
+      <div class="card">
+        <div class="card-head"><span class="card-num">04</span><span class="card-title">Area grows with the side squared</span></div>
+        <p>Shapes with the same form are <strong>similar</strong>. Double the side and the area goes up 4 times. So area, and a price based on area, is a fixed number times side&sup2;.</p>
+        <svg viewBox="0 0 200 190" width="150" height="142" role="img" aria-label="Right triangle with legs 12 and a, hypotenuse c">
+          <polygon points="40,170 40,30 160,170" style="fill:var(--teal-pale);stroke:var(--ink);stroke-width:2"/>
+          <rect x="40" y="158" width="12" height="12" style="fill:none;stroke:var(--ink);stroke-width:1.5"/>
+          <text x="92" y="186" font-size="13" font-family="monospace">12</text>
+          <text x="22" y="105" font-size="13" font-family="monospace">a</text>
+          <text x="106" y="94" font-size="13" font-family="monospace">c</text>
+        </svg>
+        <div class="card-tip">Similar shapes on the three sides of a right triangle obey Pythagoras too: the two small ones add up to the big one. Use the prices as areas.</div>
+        <span class="card-go">Pentagonal cookies &rarr;</span>
+      </div>
+    </a>
+
+  </div>
+
+</div>
+</body>
+</html>

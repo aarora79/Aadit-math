@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A4 print: Problem 2 &middot; The quadrilateral</title>
+<link rel="stylesheet" href="print.css">
+</head>
+<body>
+<div class="wrap">
+
+
+  <p class="eyebrow">Problem 2 &middot; Special triangles</p>
+  <h1>The quadrilateral with a 26 cm diagonal</h1>
+
+  <div class="problem">
+    <strong>The question</strong>
+    What is the area of the quadrilateral shown, with diagonal 26 cm? Express your answer as a decimal to the nearest hundredth.
+    <br><br>
+    The figure: a dashed diagonal of 26 cm runs from the bottom-left corner to the top-right corner. At the bottom-left corner the diagonal makes 30&deg; with the left side and 45&deg; with the bottom side. At the top-right corner it makes 60&deg; with the top side and 45&deg; with the right side.
+  </div>
+
+  <div class="card">
+    <div class="card-head"><span class="card-num">02</span><span class="card-title">A diagonal cuts out special triangles</span></div>
+    <p>Add up the angles at each end of the diagonal. If a triangle's two known angles make 90&deg;, its third angle is a <strong>right angle</strong> and the diagonal is the hypotenuse.</p>
+    <svg viewBox="0 0 200 240" width="170" height="204" role="img" aria-label="Quadrilateral split by a diagonal into a 30-60-90 triangle and a 45-45-90 triangle">
+      <polygon points="40,220 40,46.8 140,46.8" style="fill:var(--teal-pale);stroke:var(--ink);stroke-width:2"/>
+          <polygon points="40,220 140,46.8 176.6,183.4" style="fill:var(--yellow);stroke:var(--ink);stroke-width:2"/>
+          <line x1="40" y1="220" x2="140" y2="46.8" style="stroke:var(--ink);stroke-width:2;stroke-dasharray:6 4"/>
+          <rect x="40" y="46.8" width="12" height="12" style="fill:none;stroke:var(--ink);stroke-width:1.5"/>
+          <text x="44" y="186" font-size="15" font-family="monospace">30&deg;</text>
+          <text x="66" y="214" font-size="15" font-family="monospace">45&deg;</text>
+          <text x="98" y="66" font-size="15" font-family="monospace">60&deg;</text>
+          <text x="140" y="84" font-size="15" font-family="monospace">45&deg;</text>
+          <text x="60" y="130" font-size="16" font-family="monospace" font-weight="700">26</text>
+        </svg>
+    <div class="card-tip">30-60-90 sides go 1 : &radic;3 : 2. 45-45-90 sides go 1 : 1 : &radic;2. Find each triangle's area on its own, then add.</div>
+  </div>
+
+  <h2>Step by step</h2>
+  <ol class="steps">
+
+    <li>
+      <h3>Split the shape along the diagonal</h3>
+      <p>The diagonal cuts the quadrilateral into an upper triangle and a lower triangle. Both have the 26 cm diagonal as one side.</p>
+    </li>
+
+    <li>
+      <h3>Find the third angle of each triangle</h3>
+      <div class="math">upper: 180 &minus; 30 &minus; 60 = 90
+lower: 180 &minus; 45 &minus; 45 = 90</div>
+      <p>Both are right triangles, and in both the diagonal sits opposite the right angle. So 26 is the hypotenuse each time.</p>
+    </li>
+
+    <li>
+      <h3>Upper triangle: 30-60-90</h3>
+      <p>The short leg is half the hypotenuse. The long leg is the short leg times &radic;3.</p>
+      <div class="math">short leg = 26 &divide; 2 = 13
+long leg  = 13&radic;3
+area      = &frac12; &times; 13 &times; 13&radic;3 = 84.5&radic;3 &asymp; 146.36</div>
+    </li>
+
+    <li>
+      <h3>Lower triangle: 45-45-90</h3>
+      <p>Both legs are equal, and each leg times &radic;2 gives the hypotenuse.</p>
+      <div class="math">leg  = 26 &divide; &radic;2
+area = &frac12; &times; leg &times; leg = &frac12; &times; 676 &divide; 2 = 169</div>
+      <p>Shortcut: the area of a 45-45-90 triangle is hypotenuse&sup2; &divide; 4.</p>
+    </li>
+
+    <li>
+      <h3>Add the two areas</h3>
+      <div class="math">169 + 84.5&radic;3
+= 169 + 84.5 &times; 1.7320508&hellip;
+= 169 + 146.358&hellip;
+= 315.358&hellip;  &rarr;  315.36</div>
+    </li>
+
+    <li>
+      <h3>Sanity check</h3>
+      <p>A square with diagonal 26 has area 26&sup2; &divide; 2 = 338. A square has the biggest possible area for that diagonal when both triangles are 45-45-90. Our upper triangle is a little thinner, so the answer should come out a little under 338. It does.</p>
+    </li>
+
+  </ol>
+
+  <div class="answer">315.36 cm&sup2;</div>
+
+  <div class="watch">
+    <p><strong>How to spot this type:</strong> a shape with one diagonal drawn and angles marked at its ends. Add the angles in each triangle. When they reach 90&deg; you have a right triangle, and when the angles are 30, 45 or 60 the side ratios are already known. Keep &radic;3 in the answer until the last step, then round once.</p>
+  </div>
+
+
+</div>
+</body>
+</html>

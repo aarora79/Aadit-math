@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Problem 1 &middot; Aerith and Bob</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <nav class="pager">
+    <a class="home" href="index.html">All cards</a>
+    <a class="here" href="01-ages.html">1 &middot; Ages</a>
+    <a href="02-special-triangles.html">2 &middot; Special triangles</a>
+    <a href="03-unit-price.html">3 &middot; Unit price</a>
+    <a href="04-similar-areas.html">4 &middot; Similar areas</a>
+  </nav>
+
+  <p class="eyebrow">Problem 1 &middot; Ages</p>
+  <h1>Aerith and Bob</h1>
+
+  <div class="problem">
+    <strong>The question</strong>
+    Aerith is twice as old as Bob. Eight years ago, Aerith's age in years was equal to the square of Bob's age in years at that time. If Bob is more than 8 years old now, how many years old is Aerith now?
+  </div>
+
+  <div class="card">
+    <div class="card-head"><span class="card-num">01</span><span class="card-title">One letter for every age</span></div>
+    <p>Pick one unknown, usually the younger person's age <strong>now</strong>. Write every other age with that same letter. &ldquo;Eight years ago&rdquo; means subtract 8 from <em>both</em> people.</p>
+    <table>
+      <tr><th></th><th>Bob</th><th>Aerith</th></tr>
+      <tr><td>now</td><td>b</td><td>2b</td></tr>
+      <tr><td>8 years ago</td><td>b &minus; 8</td><td>2b &minus; 8</td></tr>
+    </table>
+    <div class="card-tip">A square in the problem gives you a quadratic, so expect two answers. Use the extra clue to throw one away, then check which person the question asks about.</div>
+  </div>
+
+  <h2>Step by step</h2>
+  <ol class="steps">
+
+    <li>
+      <h3>Name Bob's age now</h3>
+      <p>Call it b. Aerith is twice as old, so she is 2b. Eight years ago Bob was b &minus; 8 and Aerith was 2b &minus; 8.</p>
+    </li>
+
+    <li>
+      <h3>Turn the sentence into an equation</h3>
+      <p>&ldquo;Aerith's age then equals the square of Bob's age then.&rdquo;</p>
+      <div class="math">2b &minus; 8 = (b &minus; 8)&sup2;</div>
+    </li>
+
+    <li>
+      <h3>Multiply out and collect everything on one side</h3>
+      <div class="math">(b &minus; 8)&sup2; = b&sup2; &minus; 16b + 64
+
+2b &minus; 8 = b&sup2; &minus; 16b + 64
+       0 = b&sup2; &minus; 18b + 72</div>
+    </li>
+
+    <li>
+      <h3>Factor</h3>
+      <p>Look for two numbers that multiply to 72 and add to 18. They are 6 and 12.</p>
+      <div class="math">(b &minus; 6)(b &minus; 12) = 0   &rarr;   b = 6 or b = 12</div>
+    </li>
+
+    <li>
+      <h3>Use the extra clue</h3>
+      <p>Bob is more than 8 years old, so b = 6 is out. (With b = 6, Bob would have been &minus;2 eight years ago.) Bob is 12.</p>
+    </li>
+
+    <li>
+      <h3>Answer the question that was asked</h3>
+      <p>The question wants Aerith, not Bob.</p>
+      <div class="math">Aerith = 2 &times; 12 = 24</div>
+    </li>
+
+    <li>
+      <h3>Check</h3>
+      <table>
+        <tr><th></th><th>Bob</th><th>Aerith</th></tr>
+        <tr><td>now</td><td>12</td><td>24</td></tr>
+        <tr><td>8 years ago</td><td>4</td><td>16</td></tr>
+      </table>
+      <p>4&sup2; = 16, so it works. Watch out: 4 is Bob's age eight years ago. It is not the answer.</p>
+    </li>
+
+  </ol>
+
+  <div class="answer">Aerith is 24 years old.</div>
+
+  <div class="watch">
+    <p><strong>How to spot this type:</strong> two people's ages and a clue about some other time. Use one letter for one person's age now, build a small table of now and then, and write the clue as an equation. A square makes it a quadratic, so the problem always gives you a second clue to pick between the two roots.</p>
+  </div>
+
+  <div class="prevnext">
+    <a href="index.html">&larr; All cards</a>
+    <a href="02-special-triangles.html">2 &middot; Special triangles &rarr;</a>
+  </div>
+
+</div>
+</body>
+</html>

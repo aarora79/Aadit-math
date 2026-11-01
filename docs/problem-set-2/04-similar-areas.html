@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Problem 4 &middot; Pentagonal cookies</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <nav class="pager">
+    <a class="home" href="index.html">All cards</a>
+    <a href="01-ages.html">1 &middot; Ages</a>
+    <a href="02-special-triangles.html">2 &middot; Special triangles</a>
+    <a href="03-unit-price.html">3 &middot; Unit price</a>
+    <a class="here" href="04-similar-areas.html">4 &middot; Similar areas</a>
+  </nav>
+
+  <p class="eyebrow">Problem 4 &middot; Similar areas</p>
+  <h1>Pentagonal cookies</h1>
+
+  <div class="problem">
+    <strong>The question</strong>
+    A geometric baker makes pentagonal cookies, as shown below. Cookies are priced in proportion to their area, and two cookies have prices as indicated. What is the area of the right triangle shown?
+    <br><br>
+    The figure: a right triangle sits in the middle. A regular pentagon is built on each of its three sides. The pentagon on the 12 in. leg costs $9. The pentagon on the hypotenuse costs $21.25. The pentagon on the other leg has no price.
+  </div>
+
+  <div class="card">
+    <div class="card-head"><span class="card-num">04</span><span class="card-title">Area grows with the side squared</span></div>
+    <p>Shapes with the same form are <strong>similar</strong>. Double the side and the area goes up 4 times. So area, and a price based on area, is a fixed number times side&sup2;.</p>
+    <svg viewBox="0 0 200 190" width="170" height="162" role="img" aria-label="Right triangle with legs 12 and a, hypotenuse c">
+      <polygon points="40,170 40,30 160,170" style="fill:var(--teal-pale);stroke:var(--ink);stroke-width:2"/>
+      <rect x="40" y="158" width="12" height="12" style="fill:none;stroke:var(--ink);stroke-width:1.5"/>
+      <text x="92" y="186" font-size="13" font-family="monospace">12</text>
+      <text x="22" y="105" font-size="13" font-family="monospace">a</text>
+      <text x="106" y="94" font-size="13" font-family="monospace">c</text>
+    </svg>
+    <div class="card-tip">Similar shapes on the three sides of a right triangle obey Pythagoras too: the two small ones add up to the big one. Use the prices as areas.</div>
+  </div>
+
+  <h2>Step by step</h2>
+  <ol class="steps">
+
+    <li>
+      <h3>Read the picture</h3>
+      <p>Each pentagon shares one whole side with the triangle. Call the unknown leg a and the hypotenuse c.</p>
+      <div class="math">$9 cookie     &rarr; side 12 (a leg)
+$21.25 cookie &rarr; side c  (the hypotenuse)
+no price      &rarr; side a  (the other leg)</div>
+    </li>
+
+    <li>
+      <h3>Price works like side squared</h3>
+      <p>All regular pentagons are similar, so a pentagon's area is some fixed number k times side&sup2;. The price is proportional to the area, so price = k &times; side&sup2; for one fixed k.</p>
+      <div class="math">9 = k &times; 12&sup2; = 144k   &rarr;   k = 9/144 = 1/16</div>
+    </li>
+
+    <li>
+      <h3>Find the hypotenuse squared</h3>
+      <div class="math">21.25 = c&sup2; &divide; 16   &rarr;   c&sup2; = 21.25 &times; 16 = 340</div>
+    </li>
+
+    <li>
+      <h3>Pythagoras gives the other leg</h3>
+      <div class="math">a&sup2; + 12&sup2; = c&sup2;
+a&sup2; + 144  = 340
+a&sup2;        = 196   &rarr;   a = 14</div>
+      <p>Faster: the cookies follow Pythagoras too. The missing cookie costs 21.25 &minus; 9 = $12.25, and 12.25 &times; 16 = 196 = 14&sup2;.</p>
+    </li>
+
+    <li>
+      <h3>Area of the right triangle</h3>
+      <p>The two legs are the base and the height.</p>
+      <div class="math">&frac12; &times; 12 &times; 14 = 84</div>
+    </li>
+
+    <li>
+      <h3>Watch the trap</h3>
+      <p>340 is c&sup2;, the hypotenuse squared. It is not an area of anything in the question. Keep going until you have the triangle itself.</p>
+    </li>
+
+  </ol>
+
+  <div class="answer">84 in&sup2;</div>
+
+  <div class="watch">
+    <p><strong>How to spot this type:</strong> the same shape drawn at different sizes, with a price, weight or area given for some of them. Write everything as k &times; side&sup2;, find k from the one you know fully, and the rest follow. When the shapes sit on the sides of a right triangle, Pythagoras adds up their areas as well as the squares.</p>
+  </div>
+
+  <div class="prevnext">
+    <a href="03-unit-price.html">&larr; 3 &middot; Unit price</a>
+    <a href="index.html">All cards &rarr;</a>
+  </div>
+
+</div>
+</body>
+</html>
