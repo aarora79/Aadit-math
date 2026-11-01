@@ -14,8 +14,8 @@ This is a static study site for a middle-school MATHCOUNTS student. GitHub Pages
 
 1. Create `docs/problem-set-N/` and copy `style.css` and `print/print.css` from the newest set.
 2. Write `index.html` with one concept card per problem. Each card links to its solution page.
-3. Write one solution page per problem, `0X-topic.html`, matching the existing ones. In order: `.problem` (the question), `<p class="hint-label" id="hint-1-label">Hint 1</p>` followed by the concept `.card`, `<div class="hint" id="hint-2">` with the second hint, then `<h2>Step by step</h2>`, `.steps`, `.answer`, `.watch`, and `<script src="../hints.js"></script>` before `</body>`. `hints.js` hides everything after the question and shows one stage per click.
-4. Make the print pages by stripping the nav from each solution page:
+3. Write one solution page per problem, `0X-topic.html`, matching the existing ones. In order: `.problem` (the question), then three collapsed `<details class="reveal">` sections: `Hint 1` holding the concept `.card`, `Hint 2` holding one paragraph, and `Step-by-step solution` holding `<h2>Step by step</h2>`, `.steps`, `.answer` and `.watch`. They start closed and need no script.
+4. Make the print pages by stripping the nav from each solution page, then remove the `<details>` and `<summary>` wrappers so the print copy shows everything:
 
    ```bash
    cd docs/problem-set-N

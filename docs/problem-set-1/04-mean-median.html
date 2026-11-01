@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Problem 4 — Evan's test scores</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
 <div class="wrap">
@@ -27,7 +27,8 @@
     Evan takes four math tests. The median of his four test scores is 81 and the mean is 75. If the highest of his four test scores is 97, what is the lowest of his scores?
   </div>
 
-  <p class="hint-label" id="hint-1-label">Hint 1</p>
+  <details class="reveal">
+  <summary>Hint 1</summary>
   <div class="card">
     <div class="card-head"><span class="card-num">04</span><span class="card-title">Mean and median say different things</span></div>
     <p>Put the values in order, smallest to largest. The <strong>mean</strong> gives you the total of all four. From the <strong>median</strong> you get the sum of the middle two. You now have two equations.</p>
@@ -36,12 +37,15 @@
     </div>
     <div class="card-tip">With one more value given, subtraction finds the last one. Check the answer: the smallest value cannot be bigger than the mean.</div>
   </div>
+  </details>
 
-  <div class="hint" id="hint-2">
-    <strong>Hint 2</strong>
-    A mean of 75 over four tests means the four scores add up to 4 &times; 75. A median of 81 means the two middle scores add up to 2 &times; 81. What is left for the highest and lowest together?
-  </div>
+  <details class="reveal">
+  <summary>Hint 2</summary>
+  <p>A mean of 75 over four tests means the four scores add up to 4 &times; 75. A median of 81 means the two middle scores add up to 2 &times; 81. What is left for the highest and lowest together?</p>
+  </details>
 
+  <details class="reveal">
+  <summary>Step-by-step solution</summary>
   <h2>Step by step</h2>
   <ol class="steps">
 
@@ -86,6 +90,7 @@ highest = 97 &check;</div>
   </ol>
 
   <div class="answer">Evan's lowest score is 41.</div>
+  </details>
 
   <div class="prevnext">
     <a href="03-rate-time.html">&larr; 3 &middot; Rate and time</a>
@@ -93,6 +98,5 @@ highest = 97 &check;</div>
   </div>
 
 </div>
-<script src="../hints.js"></script>
 </body>
 </html>

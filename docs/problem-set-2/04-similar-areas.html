@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Problem 4 &middot; Pentagonal cookies</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
 <div class="wrap">
@@ -27,7 +27,8 @@
     <p style="margin:10px 0 0;font-size:14px">The 12 in. leg is the side shared with the $9 cookie. The hypotenuse is the side shared with the $21.25 cookie.</p>
   </div>
 
-  <p class="hint-label" id="hint-1-label">Hint 1</p>
+  <details class="reveal">
+  <summary>Hint 1</summary>
   <div class="card">
     <div class="card-head"><span class="card-num">04</span><span class="card-title">Area grows with the side squared</span></div>
     <p>Shapes with the same form are <strong>similar</strong>. Double the side and the area goes up 4 times. So area, and a price based on area, is a fixed number times side&sup2;.</p>
@@ -40,12 +41,15 @@
     </svg>
     <div class="card-tip">Similar shapes on the three sides of a right triangle obey Pythagoras too: the two small ones add up to the big one. Use the prices as areas.</div>
   </div>
+  </details>
 
-  <div class="hint" id="hint-2">
-    <strong>Hint 2</strong>
-    Write price = k &times; side&sup2;. The $9 cookie has side 12, so 9 = 144k. Use that k to get the hypotenuse squared from $21.25, then Pythagoras gives the other leg.
-  </div>
+  <details class="reveal">
+  <summary>Hint 2</summary>
+  <p>Write price = k &times; side&sup2;. The $9 cookie has side 12, so 9 = 144k. Use that k to get the hypotenuse squared from $21.25, then Pythagoras gives the other leg.</p>
+  </details>
 
+  <details class="reveal">
+  <summary>Step-by-step solution</summary>
   <h2>Step by step</h2>
   <ol class="steps">
 
@@ -94,6 +98,7 @@ a&sup2;        = 196   &rarr;   a = 14</div>
   <div class="watch">
     <p><strong>How to spot this type:</strong> the same shape drawn at different sizes, with a price, weight or area given for some of them. Write everything as k &times; side&sup2;, find k from the one you know fully, and the rest follow. When the shapes sit on the sides of a right triangle, Pythagoras adds up their areas as well as the squares.</p>
   </div>
+  </details>
 
   <div class="prevnext">
     <a href="03-unit-price.html">&larr; 3 &middot; Unit price</a>
@@ -101,6 +106,5 @@ a&sup2;        = 196   &rarr;   a = 14</div>
   </div>
 
 </div>
-<script src="../hints.js"></script>
 </body>
 </html>

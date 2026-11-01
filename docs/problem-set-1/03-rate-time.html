@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Problem 3 — Kris and Susie</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
 <div class="wrap">
@@ -27,7 +27,8 @@
     Kris and Susie are running a 100-meter race. Both run at constant speeds. Susie's running speed is 1.25 meters per second faster than Kris's running speed, and she finishes the race 4 seconds faster than Kris. How many seconds does Susie take to finish the race?
   </div>
 
-  <p class="hint-label" id="hint-1-label">Hint 1</p>
+  <details class="reveal">
+  <summary>Hint 1</summary>
   <div class="card">
     <div class="card-head"><span class="card-num">03</span><span class="card-title">Same distance, two rates</span></div>
     <p>Both runners cover the <strong>same distance</strong>. Call the slower time t, so the faster time is t minus the head start you were given. Speed is distance divided by time, and that turns the speed gap into an equation.</p>
@@ -37,12 +38,15 @@
     </div>
     <div class="card-tip">Multiply out the fractions and you get a quadratic equation. Drop the negative answer. Then check whose time the question asked for.</div>
   </div>
+  </details>
 
-  <div class="hint" id="hint-2">
-    <strong>Hint 2</strong>
-    Call Kris's time t seconds, so Susie's time is t &minus; 4. Each speed is 100 divided by that runner's time. Susie's speed minus Kris's speed is 1.25.
-  </div>
+  <details class="reveal">
+  <summary>Hint 2</summary>
+  <p>Call Kris's time t seconds, so Susie's time is t &minus; 4. Each speed is 100 divided by that runner's time. Susie's speed minus Kris's speed is 1.25.</p>
+  </details>
 
+  <details class="reveal">
+  <summary>Step-by-step solution</summary>
   <h2>Step by step</h2>
   <ol class="steps">
 
@@ -104,6 +108,7 @@ t&sup2; &minus; 4t &minus; 320 = 0
   <div class="watch">
     <p><strong>How to spot this type:</strong> two people, one shared distance, and you are told the gap between their speeds and the gap between their times. Name the slower time t, write the faster one as t minus the gap, and the rest is algebra. Factoring beats the quadratic formula when the numbers are friendly, so always try it first.</p>
   </div>
+  </details>
 
   <div class="prevnext">
     <a href="02-remainder-cycles.html">&larr; 2 &middot; Remainder cycles</a>
@@ -111,6 +116,5 @@ t&sup2; &minus; 4t &minus; 320 = 0
   </div>
 
 </div>
-<script src="../hints.js"></script>
 </body>
 </html>

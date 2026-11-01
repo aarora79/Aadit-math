@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Problem 3 &middot; Matthew's candy</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
 <div class="wrap">
@@ -25,7 +25,8 @@
     Matthew buys a bag of 50 pieces of candy for $8. He eats 25 pieces and sells the remaining 25 pieces to Darren for $5. How many more cents per piece does Darren pay, on average, than Matthew?
   </div>
 
-  <p class="hint-label" id="hint-1-label">Hint 1</p>
+  <details class="reveal">
+  <summary>Hint 1</summary>
   <div class="card">
     <div class="card-head"><span class="card-num">03</span><span class="card-title">Price per piece is cost divided by count</span></div>
     <p>Change dollars to <strong>cents</strong> first, then divide by the number of pieces each person paid for. Now the two prices are in the same unit and you can subtract.</p>
@@ -35,12 +36,15 @@
     </div>
     <div class="card-tip">Ignore what nobody paid for. The 25 pieces Matthew ate do not change what each piece cost him.</div>
   </div>
+  </details>
 
-  <div class="hint" id="hint-2">
-    <strong>Hint 2</strong>
-    Work in cents. Matthew paid 800 cents for 50 pieces. Darren paid 500 cents for 25 pieces. Find each price per piece, then compare.
-  </div>
+  <details class="reveal">
+  <summary>Hint 2</summary>
+  <p>Work in cents. Matthew paid 800 cents for 50 pieces. Darren paid 500 cents for 25 pieces. Find each price per piece, then compare.</p>
+  </details>
 
+  <details class="reveal">
+  <summary>Step-by-step solution</summary>
   <h2>Step by step</h2>
   <ol class="steps">
 
@@ -80,6 +84,7 @@ $5 = 500 cents</div>
   <div class="watch">
     <p><strong>How to spot this type:</strong> &ldquo;per piece&rdquo;, &ldquo;each&rdquo; or &ldquo;on average&rdquo; next to a money total. Divide each total by its own count, in the unit the answer wants, and only then compare. Extra story details, like the candy Matthew ate, are often there to distract you.</p>
   </div>
+  </details>
 
   <div class="prevnext">
     <a href="02-special-triangles.html">&larr; 2 &middot; Special triangles</a>
@@ -87,6 +92,5 @@ $5 = 500 cents</div>
   </div>
 
 </div>
-<script src="../hints.js"></script>
 </body>
 </html>

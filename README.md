@@ -2,7 +2,7 @@
 
 Study pages for MATHCOUNTS practice, published with GitHub Pages at https://aarora79.github.io/Aadit-math/.
 
-Each problem set takes the problems from one worksheet and turns each problem into a concept card and a worked solution. A problem page opens with only the question. The reader can ask for a first hint, then a second hint, then the step-by-step solution.
+Each problem set takes the problems from one worksheet and turns each problem into a concept card and a worked solution. A problem page opens with only the question. Below it are three collapsed sections, Hint 1, Hint 2 and the step-by-step solution, which a student can open with a click.
 
 The question bank has one new practice question for every problem type in the sets. Its hints and solutions sit on a separate page that asks for a password.
 
@@ -13,7 +13,6 @@ The question bank has one new practice question for every problem type in the se
 | `docs/` | The published site. GitHub Pages serves this folder from `main`. |
 | `docs/problem-set-N/` | One worksheet: `index.html` holds the cards, `0X-*.html` the solution pages, `print/` the A4 versions. |
 | `docs/question-bank/` | Practice questions and the locked solutions page. |
-| `docs/hints.js` | Reveals hint 1, hint 2 and the solution one click at a time. |
 | `tools/build_solutions.py` | Builds the locked solutions page from `private/solutions-content.html`, which is not committed. |
 
 ## Viewing locally

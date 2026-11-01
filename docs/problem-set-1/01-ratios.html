@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Problem 1 — Tennis matches</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
 <div class="wrap">
@@ -27,7 +27,8 @@
     Andy won 3 out of every 5 tennis matches that he played against Jason. If they played 35 matches in total, how many of them did Jason win?
   </div>
 
-  <p class="hint-label" id="hint-1-label">Hint 1</p>
+  <details class="reveal">
+  <summary>Hint 1</summary>
   <div class="card">
     <div class="card-head"><span class="card-num">01</span><span class="card-title">A ratio is equal groups</span></div>
     <p>&ldquo;3 out of every 5&rdquo; breaks the whole into <strong>groups of 5</strong>. Each group hands 3 to one side and 2 to the other. Count the groups first.</p>
@@ -36,12 +37,15 @@
     </div>
     <div class="card-tip">The parts add back to the whole: 3 + 2 = 5. Read the question again to see <em>which</em> part it wants.</div>
   </div>
+  </details>
 
-  <div class="hint" id="hint-2">
-    <strong>Hint 2</strong>
-    In every group of 5 matches, Andy wins 3 and Jason wins 2. How many groups of 5 fit into 35 matches?
-  </div>
+  <details class="reveal">
+  <summary>Hint 2</summary>
+  <p>In every group of 5 matches, Andy wins 3 and Jason wins 2. How many groups of 5 fit into 35 matches?</p>
+  </details>
 
+  <details class="reveal">
+  <summary>Step-by-step solution</summary>
   <h2>Step by step</h2>
   <ol class="steps">
 
@@ -77,6 +81,7 @@ Jason: 2 &times; 7 = 14</div>
   </ol>
 
   <div class="answer">Jason won 14 matches.</div>
+  </details>
 
   <div class="prevnext">
     <span>First problem</span>
@@ -84,6 +89,5 @@ Jason: 2 &times; 7 = 14</div>
   </div>
 
 </div>
-<script src="../hints.js"></script>
 </body>
 </html>

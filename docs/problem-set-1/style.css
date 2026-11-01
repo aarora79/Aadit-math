@@ -347,3 +347,10 @@ a.cardlink:active .card { transform: scale(0.994); box-shadow: 0 1px 6px rgba(11
   text-decoration: underline;
   cursor: pointer;
 }
+
+/* Collapsed hint and solution sections. Native <details>, so they start closed without any script. */
+details.reveal { background: #FFFFFF; border: 1px solid var(--rule); border-radius: 8px; padding: 12px 18px; margin-top: 14px; }
+details.reveal[open] { background: var(--yellow-pale); }
+details.reveal > summary { cursor: pointer; font-weight: 600; color: var(--teal); font-size: 16px; }
+details.reveal > .card { margin-top: 12px; }
+details.reveal > p { margin: 10px 0 2px; }
