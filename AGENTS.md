@@ -12,6 +12,7 @@ This is a static study site for a middle-school MATHCOUNTS student. GitHub Pages
 - Every geometry solution shows figures, drawn as inline SVG inside the solution steps:
   - Label every side of every shape, including sides that repeat. A rectangle split into pieces gets its widths on both the top and the bottom and its heights on both the left and the right.
   - Use the same letters the steps use (`w`, `4w`, `h`, `k`, `a`, `c`). Mark a side that is still unknown with `?`.
+  - Show each length as a dimension line beside its side, with an arrowhead at both ends and the label next to the line. Draw one arrowed line per piece, so a width of 4w and a width of w get separate arrows that meet at the dividing line.
   - Write each piece's area rule inside it (for example `4w &times; h`) under its value.
   - Mark right angles with a small square, and mark the given angles.
   - Draw a setup figure with the unknowns, then a second figure once they are found, with the values filled in.
