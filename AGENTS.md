@@ -4,12 +4,19 @@ This is a static study site for a middle-school MATHCOUNTS student. GitHub Pages
 
 ## Rules
 
-- Readers are middle-school students. Use short sentences and plain words, and explain every step. Do not skip arithmetic.
+- Write for an average 8th grader. Make every page as simple as possible: short sentences, plain words, one idea per step, and no skipped arithmetic. If a step needs a picture to make sense, draw one.
 - Check every answer with a quick script before publishing. A wrong answer here does real harm.
 - No em-dashes and no emojis anywhere. Use a colon, a comma or two sentences instead.
 - Write special characters as HTML entities (`&minus;`, `&times;`, `&deg;`, `&radic;`, `&sup2;`). The locked solutions page requires ASCII-only source.
 - Keep links relative so the site works both from `file://` and on GitHub Pages.
-- Every geometry solution shows figures. Draw an inline SVG of the shape inside the solution steps, and label it with the unknowns the steps use (`w`, `4w`, `h`, `k`, `a`, `c`, `?`). Mark right angles with a small square. Draw a second figure once the unknowns are found, with the values filled in. Wrap each one as `<div class="figure">...<p class="figcap">caption</p></div>` and say "Not to scale" when it is not. This applies to problem set pages, their print copies and the question bank solutions.
+- Every geometry solution shows figures, drawn as inline SVG inside the solution steps:
+  - Label every side of every shape, including sides that repeat. A rectangle split into pieces gets its widths on both the top and the bottom and its heights on both the left and the right.
+  - Use the same letters the steps use (`w`, `4w`, `h`, `k`, `a`, `c`). Mark a side that is still unknown with `?`.
+  - Write each piece's area rule inside it (for example `4w &times; h`) under its value.
+  - Mark right angles with a small square, and mark the given angles.
+  - Draw a setup figure with the unknowns, then a second figure once they are found, with the values filled in.
+  - Wrap each one as `<div class="figure">...<p class="figcap">caption</p></div>`. The caption says in plain words what the labels mean, and says "Not to scale" when it is not.
+  - This applies to problem set pages, their print copies and the question bank solutions.
 
 ## Adding a problem set
 
