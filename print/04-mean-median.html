@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A4 &mdash; Problem 4 — Evan's test scores</title>
+<link rel="stylesheet" href="print.css">
+</head>
+<body>
+<div class="wrap">
+
+
+  <p class="eyebrow">Problem 4 &middot; Mean and median</p>
+  <h1>Evan's four test scores</h1>
+
+  <div class="problem">
+    <strong>The question</strong>
+    Evan takes four math tests. The median of his four test scores is 81 and the mean is 75. If the highest of his four test scores is 97, what is the lowest of his scores?
+  </div>
+
+  <div class="card">
+    <div class="card-head"><span class="card-num">04</span><span class="card-title">Mean and median say different things</span></div>
+    <p>Put the values in order, smallest to largest. The <strong>mean</strong> gives you the total of all four. From the <strong>median</strong> you get the sum of the middle two. You now have two equations.</p>
+    <div class="boxrow">
+      <span class="box">a</span><span class="box mid">b</span><span class="box mid">c</span><span class="box">d</span>
+    </div>
+    <div class="card-tip">With one more value given, subtraction finds the last one. Check the answer: the smallest value cannot be bigger than the mean.</div>
+  </div>
+
+  <h2>Step by step</h2>
+  <ol class="steps">
+
+    <li>
+      <h3>Put the four scores in order and name them</h3>
+      <div class="math">a &le; b &le; c &le; d</div>
+    </li>
+
+    <li>
+      <h3>Turn the mean into a total</h3>
+      <p>The mean is the total divided by how many there are, so multiply back.</p>
+      <div class="math">a + b + c + d = 75 &times; 4 = 300</div>
+    </li>
+
+    <li>
+      <h3>Turn the median into the middle pair</h3>
+      <p>With an even count, the median is the average of the two middle scores.</p>
+      <div class="math">(b + c) &divide; 2 = 81
+b + c = 162</div>
+    </li>
+
+    <li>
+      <h3>Use the highest score</h3>
+      <p>The largest of the four is 97, so d = 97.</p>
+    </li>
+
+    <li>
+      <h3>Subtract to find the lowest</h3>
+      <div class="math">a = 300 &minus; 97 &minus; 162
+a = 41</div>
+    </li>
+
+    <li>
+      <h3>Check that the order still works</h3>
+      <p>Any b and c that add to 162 will do, say 80 and 82.</p>
+      <div class="math">41, 80, 82, 97
+total   = 300  &rarr; mean 75 &check;
+middle  = (80 + 82) &divide; 2 = 81 &check;
+highest = 97 &check;</div>
+    </li>
+
+  </ol>
+
+  <div class="answer">Evan's lowest score is 41.</div>
+
+
+</div>
+</body>
+</html>

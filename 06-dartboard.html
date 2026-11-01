@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Problem 6 — Dartboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <nav class="pager">
+    <a class="home" href="index.html">All cards</a>
+    <a href="01-ratios.html">1 &middot; Ratios</a>
+    <a href="02-remainder-cycles.html">2 &middot; Remainders</a>
+    <a href="03-rate-time.html">3 &middot; Rate &amp; time</a>
+    <a href="04-mean-median.html">4 &middot; Mean &amp; median</a>
+    <a href="05-triangular-numbers.html">5 &middot; Triangular</a>
+    <a class="here" href="06-dartboard.html">6 &middot; Area</a>
+  </nav>
+
+  <p class="eyebrow">Problem 6 &middot; Area and probability</p>
+  <h1>The dartboard split into four rectangles</h1>
+
+  <div class="problem">
+    <strong>The question</strong>
+    A rectangular dartboard is subdivided into four smaller rectangles, as shown in the diagram, with two regions having areas 56 square units and 14 square units. Assume that when a dart is thrown it will hit the dartboard, and each point on the dartboard is equally likely to be hit. If the probability of getting a dart in the shaded region is 8/45, what is the probability of a dart hitting in the rectangle that has an area of 14 square units? Express your answer as a common fraction.
+  </div>
+
+  <div class="card">
+    <div class="card-head"><span class="card-num">06</span><span class="card-title">Shared sides give you ratios</span></div>
+    <p>Two rectangles side by side have the same height. Their areas then compare the way their widths do. A probability here is one area divided by the whole area, which gives you an equation for the missing piece.</p>
+    <div class="rect">
+      <div class="r">
+        <div class="c" style="width:110px;height:48px">56</div>
+        <div class="c" style="width:28px;height:48px;border-left:none">14</div>
+      </div>
+      <div class="r">
+        <div class="c" style="width:110px;height:30px;border-top:none;background:var(--yellow);color:#4A3B00">shaded</div>
+        <div class="c" style="width:28px;height:30px;border-top:none;border-left:none"></div>
+      </div>
+    </div>
+    <div class="card-tip">Give the two widths and two heights letters. The letters cancel when you divide, so you never need their real sizes.</div>
+  </div>
+
+  <h2>Step by step</h2>
+  <ol class="steps">
+
+    <li>
+      <h3>Name the two widths and two heights</h3>
+      <p>One cut goes down, one goes across. That makes two column widths and two row heights.</p>
+      <div class="math">left width = L,  right width = R
+top height = h,  bottom height = k</div>
+    </li>
+
+    <li>
+      <h3>Compare the two top rectangles</h3>
+      <p>They sit in the same row, so they share the height h. Their areas then line up with their widths.</p>
+      <div class="math">56 / 14 = 4, so L = 4R</div>
+      <p>Write R as w, which makes L equal to 4w.</p>
+    </li>
+
+    <li>
+      <h3>Get the top row's area</h3>
+      <div class="math">56 + 14 = 70
+(4w + w) &times; h = 5wh = 70
+wh = 14</div>
+    </li>
+
+    <li>
+      <h3>Write the shaded probability as areas</h3>
+      <p>The shaded piece is the bottom-left rectangle.</p>
+      <div class="math">shaded = 4w &times; k
+whole  = 5w &times; (h + k)
+
+4wk / [5w(h + k)] = 8/45</div>
+    </li>
+
+    <li>
+      <h3>Cancel w and solve for k</h3>
+      <p>The w appears on top and bottom, so it drops out.</p>
+      <div class="math">4k / [5(h + k)] = 8/45
+180k = 40(h + k)
+140k = 40h
+k = 2h / 7</div>
+    </li>
+
+    <li>
+      <h3>Find the whole board's area</h3>
+      <div class="math">whole = 5w(h + k)
+      = 5wh &times; (1 + 2/7)
+      = 5 &times; 14 &times; 9/7
+      = 90</div>
+    </li>
+
+    <li>
+      <h3>Divide to get the probability</h3>
+      <div class="math">14 / 90 = 7/45</div>
+    </li>
+
+    <li>
+      <h3>Check with the shaded piece</h3>
+      <div class="math">shaded = 4wk = 4 &times; 14 &times; 2/7 = 16
+16 / 90 = 8/45 &check;</div>
+    </li>
+
+  </ol>
+
+  <div class="answer">7/45</div>
+
+  <div class="watch">
+    <p><strong>The move that makes this easy:</strong> the letters cancel. You never find out the real width or height of anything, and you do not need to. Whenever a figure is cut by straight lines, look for two pieces that share a side and read their areas as a ratio of the other side.</p>
+  </div>
+
+  <div class="prevnext">
+    <a href="05-triangular-numbers.html">&larr; 5 &middot; Triangular numbers</a>
+    <span>Last problem</span>
+  </div>
+
+</div>
+</body>
+</html>

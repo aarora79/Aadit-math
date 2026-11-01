@@ -1,0 +1,113 @@
+@import url("../style.css");
+
+/* A4 print sheets. Screen rules are inherited above, then overridden here. */
+
+@page {
+  size: A4 portrait;
+  margin: 16mm 15mm 18mm;
+}
+
+html { font-size: 100%; }
+
+body {
+  padding: 0 !important;
+  background: #FFFFFF !important;
+  font-size: 10.5pt !important;
+  line-height: 1.45 !important;
+}
+
+.wrap { max-width: 100% !important; }
+
+/* navigation has no meaning on paper */
+.pager, .prevnext, .card-go { display: none !important; }
+
+h1 { font-size: 19pt !important; line-height: 1.2; margin-bottom: 2pt; }
+h2 {
+  font-size: 12.5pt !important;
+  margin: 16pt 0 7pt !important;
+  padding-bottom: 4pt;
+  page-break-after: avoid;
+  break-after: avoid;
+}
+.eyebrow { font-size: 8.5pt; }
+p { margin-bottom: 7pt; }
+
+.problem {
+  font-size: 10.5pt !important;
+  padding: 9pt 11pt !important;
+  margin: 11pt 0 0;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+.card {
+  padding: 10pt 13pt !important;
+  margin-top: 9pt;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+.card-title { font-size: 12pt !important; }
+.card p { font-size: 9.5pt !important; margin-bottom: 7pt; }
+.card-tip { font-size: 9pt !important; padding: 6pt 9pt !important; margin-top: 8pt; }
+
+ol.steps > li {
+  padding-left: 26pt !important;
+  margin-bottom: 11pt !important;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+ol.steps > li::before {
+  width: 17pt !important;
+  height: 17pt !important;
+  font-size: 9pt !important;
+}
+ol.steps h3 { font-size: 10.5pt !important; margin-bottom: 3pt; }
+ol.steps p { margin-bottom: 5pt; }
+
+.math {
+  font-size: 9.5pt !important;
+  padding: 6pt 9pt !important;
+  margin: 5pt 0;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+table { font-size: 9.5pt; width: auto !important; page-break-inside: avoid; break-inside: avoid; }
+th, td { padding: 4pt 8pt !important; }
+
+.answer {
+  font-size: 13pt !important;
+  padding: 9pt 13pt !important;
+  margin-top: 14pt;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+.watch { font-size: 9.5pt !important; padding: 8pt 11pt !important; page-break-inside: avoid; }
+
+a { color: inherit; text-decoration: none; }
+
+/* keep the fills when the browser's "background graphics" box is off */
+.card, .card-tip, .answer, .problem, .math, .watch,
+.dot, .seg, .sq, .box, .rect .c, th, td {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+/* ---- the cut-out card sheet ---- */
+.sheet {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9mm;
+}
+.sheet .card { margin: 0; height: 100%; }
+.sheet .card p { font-size: 9pt !important; }
+.sheet .card-tip { font-size: 8.5pt !important; }
+.sheet .card-title { font-size: 11pt !important; }
+.sheet-note { font-size: 9pt; color: #5A6E6D; margin-bottom: 9pt; }
+
+/* on screen the print pages still need to be readable while you check them */
+@media screen {
+  body { padding: 30px 24px 60px !important; background: #F4F1E6 !important; }
+  .wrap { max-width: 760px !important; margin: 0 auto; }
+}

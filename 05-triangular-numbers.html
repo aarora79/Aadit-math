@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Problem 5 — Greatest n</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <nav class="pager">
+    <a class="home" href="index.html">All cards</a>
+    <a href="01-ratios.html">1 &middot; Ratios</a>
+    <a href="02-remainder-cycles.html">2 &middot; Remainders</a>
+    <a href="03-rate-time.html">3 &middot; Rate &amp; time</a>
+    <a href="04-mean-median.html">4 &middot; Mean &amp; median</a>
+    <a class="here" href="05-triangular-numbers.html">5 &middot; Triangular</a>
+    <a href="06-dartboard.html">6 &middot; Area</a>
+  </nav>
+
+  <p class="eyebrow">Problem 5 &middot; Triangular numbers</p>
+  <h1>The greatest n with 1 + 2 + 3 + &hellip; + n under the limit</h1>
+
+  <div class="problem">
+    <strong>The question</strong>
+    What is the greatest positive integer n for which 1 + 2 + 3 + 4 + &hellip; + n &le; 2026?
+    <br><br>
+    <span style="font-size:13.5px;color:#5A6E6D">The limit was cut off in the photo of the worksheet. It reads 20__, so it is 2025 or 2026. Both give the same answer.</span>
+  </div>
+
+  <div class="card">
+    <div class="card-head"><span class="card-num">05</span><span class="card-title">Two staircases make a rectangle</span></div>
+    <p>Stack 1 + 2 + 3 and so on as a staircase. Turn a second copy upside down and drop it on top. The two fill a solid rectangle <strong>n</strong> wide and <strong>n+1</strong> tall, so one staircase is half of it.</p>
+    <div style="display:flex;align-items:center;gap:14px">
+      <div style="border:1.5px solid var(--ink);padding:3px;display:flex;gap:2px;background:#fff">
+        <div class="stack"><span class="sq t"></span><span class="sq y"></span><span class="sq y"></span><span class="sq y"></span><span class="sq y"></span></div>
+        <div class="stack"><span class="sq t"></span><span class="sq t"></span><span class="sq y"></span><span class="sq y"></span><span class="sq y"></span></div>
+        <div class="stack"><span class="sq t"></span><span class="sq t"></span><span class="sq t"></span><span class="sq y"></span><span class="sq y"></span></div>
+        <div class="stack"><span class="sq t"></span><span class="sq t"></span><span class="sq t"></span><span class="sq t"></span><span class="sq y"></span></div>
+      </div>
+      <div style="font-family:var(--mono);font-size:13px;color:var(--teal);line-height:1.55">
+        <div>rectangle = n(n+1)</div>
+        <div style="color:var(--ink)">staircase = n(n+1)/2</div>
+        <div style="font-size:11px;color:#5A6E6D">shown with n = 4</div>
+      </div>
+    </div>
+    <div class="card-tip">To find the biggest n under a limit, start near the square root of twice that limit. Test that n and the one after it. The question asks for n, not for the sum.</div>
+  </div>
+
+  <h2>Step by step</h2>
+  <ol class="steps">
+
+    <li>
+      <h3>Replace the long sum with the formula</h3>
+      <p>Adding 1 through n gives half of an n by n+1 rectangle.</p>
+      <div class="math">1 + 2 + 3 + &hellip; + n = n(n+1) / 2</div>
+    </li>
+
+    <li>
+      <h3>Write the condition</h3>
+      <div class="math">n(n+1) / 2 &le; 2026
+n(n+1) &le; 4052</div>
+    </li>
+
+    <li>
+      <h3>Estimate n before testing</h3>
+      <p>n(n+1) sits close to n&sup2;, so take the square root of 4052. It is a bit over 63, because 63&sup2; = 3969 and 64&sup2; = 4096.</p>
+    </li>
+
+    <li>
+      <h3>Test 63 and 64</h3>
+      <table>
+        <tr><th>n</th><th>n(n+1)</th><th>Sum</th><th>Under 2026?</th></tr>
+        <tr><td>63</td><td>63 &times; 64 = 4032</td><td>2016</td><td>yes</td></tr>
+        <tr><td>64</td><td>64 &times; 65 = 4160</td><td>2080</td><td>no</td></tr>
+      </table>
+      <p>63 fits and 64 does not, so 63 is the greatest one.</p>
+    </li>
+
+    <li>
+      <h3>Answer n, not the sum</h3>
+      <p>The sum at n = 63 is 2016. The question asks for n.</p>
+    </li>
+
+  </ol>
+
+  <div class="answer">n = 63</div>
+
+  <div class="prevnext">
+    <a href="04-mean-median.html">&larr; 4 &middot; Mean and median</a>
+    <a href="06-dartboard.html">6 &middot; Dartboard &rarr;</a>
+  </div>
+
+</div>
+</body>
+</html>
