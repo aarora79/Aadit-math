@@ -297,3 +297,53 @@ a.cardlink:active .card { transform: scale(0.994); box-shadow: 0 1px 6px rgba(11
   ol.steps > li { page-break-inside: avoid; }
   .pager, .prevnext, .card-go { display: none; }
 }
+
+/* Hints: the page starts with the question only and reveals one stage per click. */
+.is-hidden { display: none !important; }
+.hint-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: #5A6E6D;
+  font-weight: 600;
+  margin: 22px 0 -14px;
+}
+.hint {
+  background: var(--yellow-pale);
+  border-radius: 8px;
+  padding: 13px 17px;
+  margin-top: 18px;
+  font-size: 15px;
+  color: #4A3B00;
+}
+.hint strong {
+  display: block;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.hintbar { display: flex; align-items: center; gap: 16px; margin-top: 22px; }
+.hintbar .next {
+  background: var(--teal);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 20px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+.hintbar .next:hover { background: var(--ink); }
+.hintbar .skip {
+  background: none;
+  border: none;
+  color: var(--teal);
+  font: inherit;
+  font-size: 14px;
+  text-decoration: underline;
+  cursor: pointer;
+}

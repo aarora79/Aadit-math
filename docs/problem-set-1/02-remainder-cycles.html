@@ -27,6 +27,7 @@
     James is thinking of a whole number between 10 and 30, inclusive. James tells Selena the remainder when his number is divided by 3, and also the remainder when his number is divided by 4, and Selena observes that these remainders are different. How many possible numbers could James be thinking of?
   </div>
 
+  <p class="hint-label" id="hint-1-label">Hint 1</p>
   <div class="card">
     <div class="card-head"><span class="card-num">02</span><span class="card-title">Remainders run in cycles</span></div>
     <p>A remainder counts up, then starts over. By 3 it starts over every 3 numbers. By 4 it takes 4. They line up again every <strong>12</strong> numbers, the least common multiple of 3 and 4.</p>
@@ -49,6 +50,11 @@
       </div>
     </div>
     <div class="card-tip">The stripes match only at the start of each block. Count those cases. Then check whether the question wants them or wants all the rest.</div>
+  </div>
+
+  <div class="hint" id="hint-2">
+    <strong>Hint 2</strong>
+    It is easier to count the numbers where the two remainders are the <em>same</em>. That only happens at a multiple of 12 and the two numbers right after it. Count those, then take them away from all the numbers from 10 to 30.
   </div>
 
   <h2>Step by step</h2>
@@ -106,5 +112,6 @@ three more than that  &rarr; by 3 gives 0, by 4 gives 3</div>
   </div>
 
 </div>
+<script src="../hints.js"></script>
 </body>
 </html>
