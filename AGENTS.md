@@ -23,20 +23,24 @@ This is a static study site for a middle-school MATHCOUNTS student. GitHub Pages
 
 1. Create `docs/problem-set-N/` and copy `style.css` and `print/print.css` from the newest set.
 2. Write `index.html` with one concept card per problem. Each card links to its solution page.
-3. Write one solution page per problem, `0X-topic.html`, matching the existing ones. In order: `.problem` (the question), then three collapsed `<details class="reveal">` sections: `Hint 1` holding the concept `.card`, `Hint 2` holding one paragraph, and `Step-by-step solution` holding `<h2>Step by step</h2>`, `.steps`, `.answer` and `.watch`. They start closed and need no script.
-4. Make the print pages by stripping the nav from each solution page, then remove the `<details>` and `<summary>` wrappers so the print copy shows everything:
+3. Write `refresher.html`, the page the student reads before the problems. It teaches each idea the problems rely on, starting from the basics, with a table at the top that maps each idea to the problems that use it. Each idea gets an `<h2>`, one `.card` (numbered `R1`, `R2`, ...) with a short explanation and a worked example, then a "Check yourself" question with its answer in a collapsed `<details class="reveal">` whose summary is `Show the answer`. Check every answer with a script. Link it from the top of `index.html` as `Start here` (a `.golink` button), from every pager as `Refresher`, and from problem 1's back link. Add it to `print/index.html` too.
+4. Write one solution page per problem, `0X-topic.html`, matching the existing ones. In order: `.problem` (the question), then three collapsed `<details class="reveal">` sections: `Hint 1` holding the concept `.card`, `Hint 2` holding one paragraph, and `Step-by-step solution` holding `<h2>Step by step</h2>`, `.steps`, `.answer` and `.watch`. They start closed and need no script.
+5. Make the print pages by stripping the nav from each solution page and the refresher, then remove the `<details>` and `<summary>` wrappers so the print copy shows everything:
 
    ```bash
    cd docs/problem-set-N
-   for f in 0*.html; do
+   for f in 0*.html refresher.html; do
      sed -e '/<nav class="pager">/,/<\/nav>/d' -e '/<div class="prevnext">/,/<\/div>/d' \
-         -e 's/style.css/print.css/' -e 's/<title>/<title>A4 print: /' "$f" > "print/$f"
+         -e '/<summary>Hint 2<\/summary>/,/<\/details>/d' \
+         -e 's#<summary>Show the answer</summary>#<p><strong>Answer:</strong></p>#' \
+         -e '/<details class="reveal">/d' -e '/<summary>/d' -e '/<\/details>/d' \
+         -e 's/style.css?v=4/print.css/' -e 's/<title>/<title>A4 print: /' "$f" > "print/$f"
    done
    ```
 
    Fix any `src="images/..."` paths in `print/` to `../images/...`. Then write `print/cards.html` (all cards on one sheet) and `print/index.html`.
-5. Add a card for the new set to `docs/index.html`.
-6. Add one new practice question per problem to the question bank (below).
+6. Add a card for the new set to `docs/index.html`.
+7. Add one new practice question per problem to the question bank (below).
 
 ## Question bank
 

@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A4 print: Refresher &middot; Problem set 3 &middot; Prime numbers</title>
+<link rel="stylesheet" href="print.css">
+</head>
+<body>
+<div class="wrap">
+
+
+  <p class="eyebrow">Problem set 3 &middot; Prime numbers &middot; Refresher</p>
+  <h1>Prime numbers: the ideas you need</h1>
+  <p style="margin-top:10px">Read this page before you try the problems. Each section explains one idea, shows a short example, and ends with a quick question to check yourself. Try the question on paper, then open the answer.</p>
+
+  <table>
+    <tr><th>Idea</th><th>Used in problems</th></tr>
+    <tr><td>1 &middot; What a prime is</td><td>1, 3</td></tr>
+    <tr><td>2 &middot; Testing a number for prime</td><td>1, 3</td></tr>
+    <tr><td>3 &middot; Breaking a number into primes</td><td>2, 4, 6, 8</td></tr>
+    <tr><td>4 &middot; Odd and even</td><td>3</td></tr>
+    <tr><td>5 &middot; Counting divisors</td><td>4, 6</td></tr>
+    <tr><td>6 &middot; Factorials and the primes inside them</td><td>5, 8</td></tr>
+    <tr><td>7 &middot; Remainders when you divide by 3</td><td>7</td></tr>
+    <tr><td>8 &middot; Perfect squares</td><td>8</td></tr>
+  </table>
+
+  <h2>1 &middot; What a prime is</h2>
+  <div class="card">
+    <div class="card-head"><span class="card-num">R1</span><span class="card-title">Exactly two factors</span></div>
+    <p>A <strong>factor</strong> of a number divides it with no remainder. A <strong>prime</strong> is a whole number with exactly two factors: 1 and itself. A whole number above 1 that is not prime is called <strong>composite</strong>.</p>
+    <div class="math">7:   factors 1, 7          &rarr;  prime
+6:   factors 1, 2, 3, 6    &rarr;  composite
+1:   factor 1 only         &rarr;  neither</div>
+    <p>The primes up to 50 are shaded below. It helps to know them by heart.</p>
+    <table>
+      <tr><td>1</td><td style="background:var(--teal-pale);font-weight:700">2</td><td style="background:var(--teal-pale);font-weight:700">3</td><td>4</td><td style="background:var(--teal-pale);font-weight:700">5</td><td>6</td><td style="background:var(--teal-pale);font-weight:700">7</td><td>8</td><td>9</td><td>10</td></tr>
+      <tr><td style="background:var(--teal-pale);font-weight:700">11</td><td>12</td><td style="background:var(--teal-pale);font-weight:700">13</td><td>14</td><td>15</td><td>16</td><td style="background:var(--teal-pale);font-weight:700">17</td><td>18</td><td style="background:var(--teal-pale);font-weight:700">19</td><td>20</td></tr>
+      <tr><td>21</td><td>22</td><td style="background:var(--teal-pale);font-weight:700">23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td style="background:var(--teal-pale);font-weight:700">29</td><td>30</td></tr>
+      <tr><td style="background:var(--teal-pale);font-weight:700">31</td><td>32</td><td>33</td><td>34</td><td>35</td><td>36</td><td style="background:var(--teal-pale);font-weight:700">37</td><td>38</td><td>39</td><td>40</td></tr>
+      <tr><td style="background:var(--teal-pale);font-weight:700">41</td><td>42</td><td style="background:var(--teal-pale);font-weight:700">43</td><td>44</td><td>45</td><td>46</td><td style="background:var(--teal-pale);font-weight:700">47</td><td>48</td><td>49</td><td>50</td></tr>
+    </table>
+    <div class="card-tip">1 is not prime, because it has only one factor. 2 is the only even prime: every other even number divides by 2.</div>
+  </div>
+  <p><strong>Check yourself:</strong> which of these are prime: 1, 2, 9, 17, 21, 29?</p>
+  <p><strong>Answer:</strong></p>
+  <p>2, 17 and 29. The number 1 has only one factor, 9 = 3 &times; 3 and 21 = 3 &times; 7.</p>
+
+  <h2>2 &middot; Testing a number for prime</h2>
+  <div class="card">
+    <div class="card-head"><span class="card-num">R2</span><span class="card-title">Divide by small primes, stop at the square</span></div>
+    <p>To test a number, divide it by the primes 2, 3, 5, 7, 11, and so on. <strong>Stop</strong> when the prime times itself is bigger than the number. If nothing divided it, the number is prime.</p>
+    <p>Why you can stop: if a number is a &times; b, the smaller of a and b is at most the square root. So a factor always shows up early.</p>
+    <table>
+      <tr><th>prime</th><th>quick rule</th><th>example</th></tr>
+      <tr><td>2</td><td>last digit is even</td><td>58</td></tr>
+      <tr><td>3</td><td>digits add to a multiple of 3</td><td>51: 5 + 1 = 6</td></tr>
+      <tr><td>5</td><td>ends in 0 or 5</td><td>85</td></tr>
+      <tr><td>7</td><td>no short rule: just divide</td><td>91 = 7 &times; 13</td></tr>
+    </table>
+    <div class="card-tip">Know your squares: 7 &times; 7 = 49, 11 &times; 11 = 121, 13 &times; 13 = 169. For a number under 121 you only need to test 2, 3, 5 and 7.</div>
+  </div>
+  <p><strong>Check yourself:</strong> is 97 prime?</p>
+  <p><strong>Answer:</strong></p>
+  <p>Yes. 10 &times; 10 = 100 is bigger than 97, so test only 2, 3, 5 and 7. 97 is odd, its digits add to 16, it ends in 7, and 7 &times; 13 = 91 while 7 &times; 14 = 98. Nothing divides it, so 97 is prime.</p>
+
+  <h2>3 &middot; Breaking a number into primes</h2>
+  <div class="card">
+    <div class="card-head"><span class="card-num">R3</span><span class="card-title">The prime factorization</span></div>
+    <p>Divide by the smallest prime that goes in, then keep going with what is left until you reach 1. Every whole number above 1 breaks into primes in <strong>only one way</strong>. This is its <strong>prime factorization</strong>.</p>
+    <div class="math"> 2 | 60
+ 2 | 30
+ 3 | 15
+ 5 |  5
+   |  1
+
+60 = 2 &times; 2 &times; 3 &times; 5 = 2&sup2; &times; 3 &times; 5</div>
+    <p>A small number written up high is a <strong>power</strong>. It counts how many times the prime is used: 2&sup2; means 2 &times; 2 and 2<sup>5</sup> means 2 &times; 2 &times; 2 &times; 2 &times; 2. A prime with no power written has power 1.</p>
+    <div class="card-tip">Check a factorization by multiplying it back. 4 &times; 3 &times; 5 = 60.</div>
+  </div>
+  <p><strong>Check yourself:</strong> write 84 as a product of primes, using powers.</p>
+  <p><strong>Answer:</strong></p>
+  <div class="math">84 &divide; 2 = 42,  42 &divide; 2 = 21,  21 &divide; 3 = 7,  7 &divide; 7 = 1
+84 = 2&sup2; &times; 3 &times; 7</div>
+
+  <h2>4 &middot; Odd and even</h2>
+  <div class="card">
+    <div class="card-head"><span class="card-num">R4</span><span class="card-title">Odd plus odd is even</span></div>
+    <p>An even number is a multiple of 2. An odd number is one more than a multiple of 2. When you add, the result follows a fixed pattern.</p>
+    <table>
+      <tr><th>add</th><th>result</th><th>example</th></tr>
+      <tr><td>odd + odd</td><td>even</td><td>3 + 5 = 8</td></tr>
+      <tr><td>odd + even</td><td>odd</td><td>3 + 4 = 7</td></tr>
+      <tr><td>even + even</td><td>even</td><td>4 + 6 = 10</td></tr>
+    </table>
+    <div class="card-tip">Every prime except 2 is odd. So two primes can only add up to an odd number if one of them is 2.</div>
+  </div>
+  <p><strong>Check yourself:</strong> can 35 be written as the sum of two primes?</p>
+  <p><strong>Answer:</strong></p>
+  <p>No. 35 is odd, so one of the primes would have to be 2, and the other would be 35 &minus; 2 = 33. But 33 = 3 &times; 11 is not prime.</p>
+
+  <h2>5 &middot; Counting divisors</h2>
+  <div class="card">
+    <div class="card-head"><span class="card-num">R5</span><span class="card-title">Choices for each power</span></div>
+    <p><strong>Divisor</strong> is another word for factor. Every divisor of a number is built from the same primes, using each one from <strong>zero</strong> times up to its power. Count the choices for each prime and multiply.</p>
+    <div class="math">12 = 2&sup2; &times; 3
+power of 2:  0, 1 or 2   (3 choices)
+power of 3:  0 or 1      (2 choices)
+3 &times; 2 = 6 divisors: 1, 2, 3, 4, 6, 12</div>
+    <p>The short rule: add 1 to each power, then multiply.</p>
+    <div class="card-tip">Using a prime zero times is a real choice. That is how the divisor 1 gets counted.</div>
+  </div>
+  <p><strong>Check yourself:</strong> how many divisors does 18 have?</p>
+  <p><strong>Answer:</strong></p>
+  <div class="math">18 = 2 &times; 3&sup2;
+(1 + 1) &times; (2 + 1) = 2 &times; 3 = 6
+divisors: 1, 2, 3, 6, 9, 18</div>
+
+  <h2>6 &middot; Factorials and the primes inside them</h2>
+  <div class="card">
+    <div class="card-head"><span class="card-num">R6</span><span class="card-title">Count the multiples</span></div>
+    <p>The <strong>factorial</strong> n! (said &ldquo;n factorial&rdquo;) multiplies every whole number from n down to 1. For example 5! = 5 &times; 4 &times; 3 &times; 2 &times; 1 = 120.</p>
+    <p>To count how many times a prime divides n!, count its multiples up to n. Then count the multiples of its square, which give a second copy, then its cube, and so on. Drop any remainders.</p>
+    <div class="math">How many 2s are in 10!?
+multiples of 2:  10 &divide; 2 = 5   (2, 4, 6, 8, 10)
+multiples of 4:  10 &divide; 4 = 2   (4, 8)
+multiples of 8:  10 &divide; 8 = 1   (8)
+total: 5 + 2 + 1 = 8, so 10! = 2<sup>8</sup> &times; (odd number)</div>
+    <div class="card-tip">A zero at the end of a number is a factor of 10 = 2 &times; 5. In a factorial the 5s run out first, so count the 5s.</div>
+  </div>
+  <p><strong>Check yourself:</strong> how many times does 3 divide 20!?</p>
+  <p><strong>Answer:</strong></p>
+  <div class="math">multiples of 3:  20 &divide; 3 = 6   (3, 6, 9, 12, 15, 18)
+multiples of 9:  20 &divide; 9 = 2   (9, 18)
+27 is bigger than 20, so stop.
+6 + 2 = 8</div>
+
+  <h2>7 &middot; Remainders when you divide by 3</h2>
+  <div class="card">
+    <div class="card-head"><span class="card-num">R7</span><span class="card-title">Every number is 3k, 3k + 1 or 3k + 2</span></div>
+    <p>Divide any whole number by 3 and the remainder is 0, 1 or 2. So every whole number can be written as 3k, 3k + 1 or 3k + 2 for some whole number k. Remainder 2 is the same as one less than a multiple of 3, so 3k + 2 can also be written 3k &minus; 1.</p>
+    <div class="math">12 = 3 &times; 4         remainder 0
+13 = 3 &times; 4 + 1     remainder 1
+14 = 3 &times; 5 &minus; 1     remainder 2</div>
+    <p>A prime above 3 is never a multiple of 3, so it is always 3k + 1 or 3k &minus; 1.</p>
+    <div class="card-tip">Algebra helps here: (3k + 1)&sup2; = 9k&sup2; + 6k + 1. The first two parts are multiples of 3, so the square leaves remainder 1.</div>
+  </div>
+  <p><strong>Check yourself:</strong> what remainder does 23 leave when divided by 3? What remainder does 23&sup2; = 529 leave?</p>
+  <p><strong>Answer:</strong></p>
+  <div class="math">23 = 3 &times; 7 + 2       remainder 2   (also 23 = 3 &times; 8 &minus; 1)
+529 = 3 &times; 176 + 1   remainder 1</div>
+
+  <h2>8 &middot; Perfect squares</h2>
+  <div class="card">
+    <div class="card-head"><span class="card-num">R8</span><span class="card-title">Squares have only even powers</span></div>
+    <p>A <strong>perfect square</strong> is a whole number times itself, like 36 = 6 &times; 6. When you square a number, every power in its prime factorization doubles. So in a perfect square <strong>every power is even</strong>.</p>
+    <div class="math">6 = 2 &times; 3          &rarr;   36 = 2&sup2; &times; 3&sup2;     even powers, square
+200 = 2&sup3; &times; 5&sup2;                       2&sup3; is odd, not a square</div>
+    <p>So a square divisor of a number uses an even power, 0, 2, 4, and so on, for every prime.</p>
+    <div class="card-tip">Zero counts as even. Using a prime zero times is allowed.</div>
+  </div>
+  <p><strong>Check yourself:</strong> 144 = 2<sup>4</sup> &times; 3&sup2;. How many of its divisors are perfect squares?</p>
+  <p><strong>Answer:</strong></p>
+  <div class="math">power of 2:  0, 2 or 4   (3 choices)
+power of 3:  0 or 2      (2 choices)
+3 &times; 2 = 6 square divisors: 1, 4, 9, 16, 36, 144</div>
+
+
+</div>
+</body>
+</html>
