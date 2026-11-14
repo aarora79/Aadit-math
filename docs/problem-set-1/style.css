@@ -359,3 +359,5 @@ details.reveal > p { margin: 10px 0 2px; }
 .figure { margin: 12px 0 4px; text-align: center; }
 .figure svg { max-width: 100%; height: auto; background: #FFFFFF; border: 1px solid var(--rule); border-radius: 6px; padding: 6px; }
 .figcap { font-size: 13px; color: #5A6E6D; margin: 6px 0 0; }
+
+.golink { background: var(--teal); color: #FFFFFF; border-radius: 999px; padding: 10px 20px; font-weight: 600; text-decoration: none; display: inline-block; }
