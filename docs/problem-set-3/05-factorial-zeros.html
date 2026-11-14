@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Problem 5 &middot; The zeros at the end of 50!</title>
+<link rel="stylesheet" href="style.css?v=4">
+</head>
+<body>
+<div class="wrap">
+
+  <nav class="pager">
+    <a class="home" href="index.html">All cards</a>
+    <a href="01-counting-primes.html">1 &middot; Counting primes</a>
+    <a href="02-prime-factors.html">2 &middot; Prime factors</a>
+    <a href="03-even-prime.html">3 &middot; The even prime</a>
+    <a href="04-counting-divisors.html">4 &middot; Counting factors</a>
+    <a class="here" href="05-factorial-zeros.html">5 &middot; Factorial zeros</a>
+    <a href="06-exactly-12-divisors.html">6 &middot; Exactly 12 factors</a>
+    <a href="07-remainders-by-3.html">7 &middot; Primes and remainders</a>
+    <a href="08-square-divisors.html">8 &middot; Square factors of 30!</a>
+  </nav>
+
+  <p class="eyebrow">Problem 5 &middot; Medium &middot; Factorial zeros</p>
+  <h1>The zeros at the end of 50!</h1>
+
+  <div class="problem">
+    <strong>The question</strong>
+    The number 50! (said &ldquo;50 factorial&rdquo;) means 50 &times; 49 &times; 48 &times; &hellip; &times; 2 &times; 1. When 50! is written out, how many zeros are at the end?
+  </div>
+
+  <details class="reveal">
+  <summary>Hint 1</summary>
+  <div class="card">
+    <div class="card-head"><span class="card-num">05</span><span class="card-title">Each end zero is a 2 times a 5</span></div>
+    <p>Each zero at the end comes from a factor of 10, and 10 = 2 &times; 5. A factorial has many more 2s than 5s, so <strong>count the 5s</strong>. A multiple of 25 holds two 5s, so it counts twice.</p>
+    <div class="math">10! = 3628800   (2 zeros)
+fives come from 5 and 10   &rarr;   2 fives</div>
+    <div class="card-tip">Count multiples of 5, then multiples of 25, then 125, and add them up.</div>
+  </div>
+  </details>
+
+  <details class="reveal">
+  <summary>Hint 2</summary>
+  <p>How many numbers from 1 to 50 are multiples of 5? Two of them, 25 and 50, each hold an extra 5.</p>
+  </details>
+
+  <details class="reveal">
+  <summary>Step-by-step solution</summary>
+  <h2>Step by step</h2>
+  <ol class="steps">
+
+    <li>
+      <h3>Where an end zero comes from</h3>
+      <p>Each zero at the end means one more factor of 10, and 10 = 2 &times; 5.</p>
+    </li>
+
+    <li>
+      <h3>Count only the 5s</h3>
+      <p>Every even number gives a 2, so there are far more 2s than 5s. Each 5 can find a 2 to pair with. The number of zeros is the number of 5s.</p>
+    </li>
+
+    <li>
+      <h3>Multiples of 5</h3>
+      <p>Each of these gives one 5.</p>
+      <div class="math">5, 10, 15, 20, 25, 30, 35, 40, 45, 50
+50 &divide; 5 = 10</div>
+    </li>
+
+    <li>
+      <h3>Multiples of 25 give an extra 5</h3>
+      <p>25 = 5 &times; 5 and 50 = 2 &times; 5 &times; 5. Each holds a second 5 that step 3 did not count.</p>
+      <div class="math">50 &divide; 25 = 2</div>
+    </li>
+
+    <li>
+      <h3>Add</h3>
+      <p>125 is bigger than 50, so there are no more.</p>
+      <div class="math">10 + 2 = 12</div>
+    </li>
+
+  </ol>
+
+  <div class="answer">50! ends in 12 zeros.</div>
+
+  <div class="watch">
+    <p><strong>How to spot this type:</strong> &ldquo;zeros at the end&rdquo; of a factorial. Divide by 5, 25, 125, and so on, drop the remainders, and add. Forgetting the 25s gives 10, a common wrong answer.</p>
+  </div>
+  </details>
+
+  <div class="prevnext">
+    <a href="04-counting-divisors.html">&larr; 4 &middot; Counting factors</a>
+    <a href="06-exactly-12-divisors.html">6 &middot; Exactly 12 factors &rarr;</a>
+  </div>
+
+</div>
+</body>
+</html>

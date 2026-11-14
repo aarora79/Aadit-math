@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Problem 7 &middot; When is p&sup2; + 2 prime?</title>
+<link rel="stylesheet" href="style.css?v=4">
+</head>
+<body>
+<div class="wrap">
+
+  <nav class="pager">
+    <a class="home" href="index.html">All cards</a>
+    <a href="01-counting-primes.html">1 &middot; Counting primes</a>
+    <a href="02-prime-factors.html">2 &middot; Prime factors</a>
+    <a href="03-even-prime.html">3 &middot; The even prime</a>
+    <a href="04-counting-divisors.html">4 &middot; Counting factors</a>
+    <a href="05-factorial-zeros.html">5 &middot; Factorial zeros</a>
+    <a href="06-exactly-12-divisors.html">6 &middot; Exactly 12 factors</a>
+    <a class="here" href="07-remainders-by-3.html">7 &middot; Primes and remainders</a>
+    <a href="08-square-divisors.html">8 &middot; Square factors of 30!</a>
+  </nav>
+
+  <p class="eyebrow">Problem 7 &middot; Hard &middot; Primes and remainders</p>
+  <h1>When is p&sup2; + 2 prime?</h1>
+
+  <div class="problem">
+    <strong>The question</strong>
+    Find every prime number p for which p&sup2; + 2 is also prime.
+  </div>
+
+  <details class="reveal">
+  <summary>Hint 1</summary>
+  <div class="card">
+    <div class="card-head"><span class="card-num">07</span><span class="card-title">Every prime above 3 sits next to a multiple of 3</span></div>
+    <p>Divide any whole number by 3 and the remainder is 0, 1 or 2. A prime bigger than 3 cannot have remainder 0, so it is <strong>one more or one less than a multiple of 3</strong>. Its square always has remainder 1.</p>
+    <table><tr><th>p</th><th>p &divide; 3 leaves</th><th>p&sup2;</th><th>p&sup2; &divide; 3 leaves</th></tr><tr><td>5</td><td>2</td><td>25</td><td>1</td></tr><tr><td>7</td><td>1</td><td>49</td><td>1</td></tr><tr><td>11</td><td>2</td><td>121</td><td>1</td></tr><tr><td>13</td><td>1</td><td>169</td><td>1</td></tr></table>
+    <div class="card-tip">Check the small primes 2 and 3 by hand. Then use remainders to handle every other prime at once.</div>
+  </div>
+  </details>
+
+  <details class="reveal">
+  <summary>Hint 2</summary>
+  <p>Try p = 2, 3, 5, 7 and 11. Look at p&sup2; + 2 each time. One number keeps dividing it. Can you explain why?</p>
+  </details>
+
+  <details class="reveal">
+  <summary>Step-by-step solution</summary>
+  <h2>Step by step</h2>
+  <ol class="steps">
+
+    <li>
+      <h3>Try small primes</h3>
+      <p>Every answer after p = 3 divides by 3.</p>
+      <div class="math">p = 2:   4 + 2 = 6     not prime
+p = 3:   9 + 2 = 11    prime
+p = 5:  25 + 2 = 27  = 3 &times; 9
+p = 7:  49 + 2 = 51  = 3 &times; 17
+p = 11: 121 + 2 = 123 = 3 &times; 41</div>
+    </li>
+
+    <li>
+      <h3>Write a prime above 3 using 3k</h3>
+      <p>A prime above 3 does not divide by 3. So it is 3k + 1 or 3k &minus; 1 for some whole number k. For example 7 = 3 &times; 2 + 1 and 11 = 3 &times; 4 &minus; 1.</p>
+    </li>
+
+    <li>
+      <h3>Square it</h3>
+      <p>In both cases the square is a multiple of 3, plus 1.</p>
+      <div class="math">(3k + 1)&sup2; = 9k&sup2; + 6k + 1 = 3(3k&sup2; + 2k) + 1
+(3k &minus; 1)&sup2; = 9k&sup2; &minus; 6k + 1 = 3(3k&sup2; &minus; 2k) + 1</div>
+    </li>
+
+    <li>
+      <h3>Add 2</h3>
+      <p>p&sup2; + 2 is a multiple of 3, plus 3, so it is a multiple of 3. It is also bigger than 3, so it cannot be prime.</p>
+      <div class="math">p&sup2; + 2 = (multiple of 3) + 1 + 2 = (multiple of 3) + 3</div>
+    </li>
+
+    <li>
+      <h3>Only 2 and 3 are left</h3>
+      <p>Step 1 already checked them: p = 2 fails and p = 3 works.</p>
+    </li>
+
+  </ol>
+
+  <div class="answer">Only p = 3 works (3&sup2; + 2 = 11).</div>
+
+  <div class="watch">
+    <p><strong>How to spot this type:</strong> &ldquo;find all primes p such that&rdquo; some formula is also prime. Test small primes, notice which number keeps dividing the result, then prove it with remainders. Remainders by 3 work most often, and remainders by 2, 4 or 5 sometimes do.</p>
+  </div>
+  </details>
+
+  <div class="prevnext">
+    <a href="06-exactly-12-divisors.html">&larr; 6 &middot; Exactly 12 factors</a>
+    <a href="08-square-divisors.html">8 &middot; Square factors of 30! &rarr;</a>
+  </div>
+
+</div>
+</body>
+</html>

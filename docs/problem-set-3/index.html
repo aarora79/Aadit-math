@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Problem set 3 &middot; MATHCOUNTS concept cards</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <p class="eyebrow">MATHCOUNTS 2026 &middot; Problem set 3 &middot; Prime numbers</p>
+  <h1>Eight concept cards</h1>
+  <p style="margin-top:10px">Every problem in this set is about prime numbers. They go from super easy to super hard: problem 1 is super easy, 2 and 3 are easy, 4 and 5 are medium, 6 and 7 are hard, and 8 is super hard. Each card holds the idea and nothing else, so it works on any problem of that kind. Click a card for the worked solution.</p>
+  <p style="font-size:14px"><a href="print/index.html" style="color:var(--teal);font-weight:600;text-decoration:none">A4 print versions &rarr;</a> &nbsp; <a href="../index.html" style="color:var(--teal);font-weight:600;text-decoration:none">All problem sets</a></p>
+
+  <div class="grid">
+
+    <a class="cardlink" href="01-counting-primes.html">
+      <div class="card">
+        <div class="card-head"><span class="card-num">01</span><span class="card-title">A prime has exactly two factors</span></div>
+        <p>A <strong>prime</strong> has exactly two factors: 1 and itself. To test a number, divide it by the small primes 2, 3, 5, 7, and so on. Stop when the prime times itself is bigger than the number.</p>
+        <div class="math">Is 37 prime?
+37 &divide; 2   no
+37 &divide; 3   no
+37 &divide; 5   no
+7 &times; 7 = 49 is bigger than 37, so stop.
+37 is prime.</div>
+        <div class="card-tip">1 is not prime: it has only one factor. 2 is the only even prime.</div>
+        <span class="card-go">Super easy: Primes from 20 to 40 &rarr;</span>
+      </div>
+    </a>
+
+    <a class="cardlink" href="02-prime-factors.html">
+      <div class="card">
+        <div class="card-head"><span class="card-num">02</span><span class="card-title">Break a number into primes</span></div>
+        <p>Divide by the smallest prime that goes in. Repeat with what is left until you reach 1. The primes you divided by are the <strong>prime factors</strong>. Every whole number above 1 breaks into primes in only one way.</p>
+        <div class="math"> 2 | 990
+ 3 | 495
+ 3 | 165
+ 5 |  55
+11 |  11
+   |   1</div>
+        <div class="card-tip">&ldquo;Distinct&rdquo; means different. If a prime shows up twice, count it only once.</div>
+        <span class="card-go">Easy: The primes inside 990 &rarr;</span>
+      </div>
+    </a>
+
+    <a class="cardlink" href="03-even-prime.html">
+      <div class="card">
+        <div class="card-head"><span class="card-num">03</span><span class="card-title">2 is the only even prime</span></div>
+        <p>Every prime except 2 is odd. Odd + odd is always <strong>even</strong>. So if two primes add up to an odd number, one of them has to be 2.</p>
+        <table><tr><th>add</th><th>result</th></tr><tr><td>odd + odd</td><td>even</td></tr><tr><td>odd + even</td><td>odd</td></tr><tr><td>even + even</td><td>even</td></tr></table>
+        <div class="card-tip">When two primes add to an odd number, subtract 2 and check that what is left is prime.</div>
+        <span class="card-go">Easy: Two primes that add to 85 &rarr;</span>
+      </div>
+    </a>
+
+    <a class="cardlink" href="04-counting-divisors.html">
+      <div class="card">
+        <div class="card-head"><span class="card-num">04</span><span class="card-title">Add one to each power, then multiply</span></div>
+        <p>Write the number as primes with powers. A divisor chooses how many of each prime to use, from <strong>zero</strong> up to the power. Multiply the number of choices together.</p>
+        <table><tr><th>12 = 2&sup2; &times; 3</th><th>3<sup>0</sup></th><th>3<sup>1</sup></th></tr><tr><td>2<sup>0</sup></td><td>1</td><td>3</td></tr><tr><td>2<sup>1</sup></td><td>2</td><td>6</td></tr><tr><td>2<sup>2</sup></td><td>4</td><td>12</td></tr></table>
+        <div class="card-tip">12 = 2&sup2; &times; 3&sup1; has (2 + 1) &times; (1 + 1) = 6 divisors: 1, 2, 3, 4, 6, 12.</div>
+        <span class="card-go">Medium: All the factors of 360 &rarr;</span>
+      </div>
+    </a>
+
+    <a class="cardlink" href="05-factorial-zeros.html">
+      <div class="card">
+        <div class="card-head"><span class="card-num">05</span><span class="card-title">Each end zero is a 2 times a 5</span></div>
+        <p>Each zero at the end comes from a factor of 10, and 10 = 2 &times; 5. A factorial has many more 2s than 5s, so <strong>count the 5s</strong>. A multiple of 25 holds two 5s, so it counts twice.</p>
+        <div class="math">10! = 3628800   (2 zeros)
+fives come from 5 and 10   &rarr;   2 fives</div>
+        <div class="card-tip">Count multiples of 5, then multiples of 25, then 125, and add them up.</div>
+        <span class="card-go">Medium: The zeros at the end of 50! &rarr;</span>
+      </div>
+    </a>
+
+    <a class="cardlink" href="06-exactly-12-divisors.html">
+      <div class="card">
+        <div class="card-head"><span class="card-num">06</span><span class="card-title">Work backward from the divisor count</span></div>
+        <p>If n = p<sup>a</sup> &times; q<sup>b</sup> &times; r<sup>c</sup>, then n has (a + 1)(b + 1)(c + 1) divisors. Split the target count into factors, subtract 1 from each to get powers, and give the <strong>biggest power to the smallest prime</strong>.</p>
+        <table><tr><th>6 =</th><th>powers</th><th>smallest n</th></tr><tr><td>6</td><td>5</td><td>2<sup>5</sup> = 32</td></tr><tr><td>3 &times; 2</td><td>2, 1</td><td>2&sup2; &times; 3 = 12</td></tr></table>
+        <div class="card-tip">Try every way to split the count. Splitting into more primes is often smaller, but check every option.</div>
+        <span class="card-go">Hard: Smallest with 12 divisors &rarr;</span>
+      </div>
+    </a>
+
+    <a class="cardlink" href="07-remainders-by-3.html">
+      <div class="card">
+        <div class="card-head"><span class="card-num">07</span><span class="card-title">Every prime above 3 sits next to a multiple of 3</span></div>
+        <p>Divide any whole number by 3 and the remainder is 0, 1 or 2. A prime bigger than 3 cannot have remainder 0, so it is <strong>one more or one less than a multiple of 3</strong>. Its square always has remainder 1.</p>
+        <table><tr><th>p</th><th>p &divide; 3 leaves</th><th>p&sup2;</th><th>p&sup2; &divide; 3 leaves</th></tr><tr><td>5</td><td>2</td><td>25</td><td>1</td></tr><tr><td>7</td><td>1</td><td>49</td><td>1</td></tr><tr><td>11</td><td>2</td><td>121</td><td>1</td></tr><tr><td>13</td><td>1</td><td>169</td><td>1</td></tr></table>
+        <div class="card-tip">Check the small primes 2 and 3 by hand. Then use remainders to handle every other prime at once.</div>
+        <span class="card-go">Hard: When is p&sup2; + 2 prime? &rarr;</span>
+      </div>
+    </a>
+
+    <a class="cardlink" href="08-square-divisors.html">
+      <div class="card">
+        <div class="card-head"><span class="card-num">08</span><span class="card-title">A perfect square uses only even powers</span></div>
+        <p>In a perfect square every prime appears an <strong>even</strong> number of times. So a square divisor picks an even power, 0, 2, 4, and so on, for each prime, up to that prime's power in the number. To find the powers inside a factorial, count multiples, as with the end zeros.</p>
+        <div class="math">72 = 2&sup3; &times; 3&sup2;
+power of 2:  0 or 2   (2 choices)
+power of 3:  0 or 2   (2 choices)
+2 &times; 2 = 4 square divisors: 1, 4, 9, 36</div>
+        <div class="card-tip">If a prime has power e, the even choices are 0, 2, 4, &hellip; up to e. That is (e &divide; 2, rounded down) + 1 choices.</div>
+        <span class="card-go">Super hard: Perfect square divisors of 30! &rarr;</span>
+      </div>
+    </a>
+
+  </div>
+
+</div>
+</body>
+</html>

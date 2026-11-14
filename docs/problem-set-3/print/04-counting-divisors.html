@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A4 print: Problem 4 &middot; All the factors of 360</title>
+<link rel="stylesheet" href="print.css">
+</head>
+<body>
+<div class="wrap">
+
+
+  <p class="eyebrow">Problem 4 &middot; Medium &middot; Counting factors</p>
+  <h1>All the factors of 360</h1>
+
+  <div class="problem">
+    <strong>The question</strong>
+    How many positive divisors does 360 have?
+  </div>
+
+  <div class="card">
+    <div class="card-head"><span class="card-num">04</span><span class="card-title">Add one to each power, then multiply</span></div>
+    <p>Write the number as primes with powers. A divisor chooses how many of each prime to use, from <strong>zero</strong> up to the power. Multiply the number of choices together.</p>
+    <table><tr><th>12 = 2&sup2; &times; 3</th><th>3<sup>0</sup></th><th>3<sup>1</sup></th></tr><tr><td>2<sup>0</sup></td><td>1</td><td>3</td></tr><tr><td>2<sup>1</sup></td><td>2</td><td>6</td></tr><tr><td>2<sup>2</sup></td><td>4</td><td>12</td></tr></table>
+    <div class="card-tip">12 = 2&sup2; &times; 3&sup1; has (2 + 1) &times; (1 + 1) = 6 divisors: 1, 2, 3, 4, 6, 12.</div>
+  </div>
+
+
+  <h2>Step by step</h2>
+  <ol class="steps">
+
+    <li>
+      <h3>Break 360 into primes</h3>
+      <div class="math">360 = 2 &times; 180
+    = 2 &times; 2 &times; 90
+    = 2 &times; 2 &times; 2 &times; 45
+    = 2 &times; 2 &times; 2 &times; 3 &times; 3 &times; 5
+    = 2&sup3; &times; 3&sup2; &times; 5&sup1;</div>
+    </li>
+
+    <li>
+      <h3>Count the choices for each prime</h3>
+      <p>A divisor can use the prime 2 zero, one, two or three times. The same idea works for 3 and 5.</p>
+      <div class="math">power of 2:  0, 1, 2, 3   &rarr;  4 choices
+power of 3:  0, 1, 2      &rarr;  3 choices
+power of 5:  0, 1         &rarr;  2 choices</div>
+    </li>
+
+    <li>
+      <h3>Multiply the choices</h3>
+      <p>Each mix of choices gives a different divisor.</p>
+      <div class="math">4 &times; 3 &times; 2 = 24</div>
+    </li>
+
+    <li>
+      <h3>Check by pairing</h3>
+      <p>Divisors come in pairs that multiply to 360. There are 12 pairs, so 24 divisors.</p>
+      <div class="math">1&times;360  2&times;180  3&times;120  4&times;90
+5&times;72   6&times;60   8&times;45   9&times;40
+10&times;36  12&times;30  15&times;24  18&times;20</div>
+    </li>
+
+  </ol>
+
+  <div class="answer">360 has 24 positive divisors.</div>
+
+  <div class="watch">
+    <p><strong>How to spot this type:</strong> &ldquo;how many divisors&rdquo; or &ldquo;how many factors&rdquo;. Factor into primes, add 1 to each power, multiply. If you forget the zero choice you get 3 &times; 2 &times; 1 = 6, which is far too small.</p>
+  </div>
+
+
+</div>
+</body>
+</html>

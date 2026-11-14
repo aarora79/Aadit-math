@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Problem 8 &middot; Perfect square divisors of 30!</title>
+<link rel="stylesheet" href="style.css?v=4">
+</head>
+<body>
+<div class="wrap">
+
+  <nav class="pager">
+    <a class="home" href="index.html">All cards</a>
+    <a href="01-counting-primes.html">1 &middot; Counting primes</a>
+    <a href="02-prime-factors.html">2 &middot; Prime factors</a>
+    <a href="03-even-prime.html">3 &middot; The even prime</a>
+    <a href="04-counting-divisors.html">4 &middot; Counting factors</a>
+    <a href="05-factorial-zeros.html">5 &middot; Factorial zeros</a>
+    <a href="06-exactly-12-divisors.html">6 &middot; Exactly 12 factors</a>
+    <a href="07-remainders-by-3.html">7 &middot; Primes and remainders</a>
+    <a class="here" href="08-square-divisors.html">8 &middot; Square factors of 30!</a>
+  </nav>
+
+  <p class="eyebrow">Problem 8 &middot; Super hard &middot; Square factors of 30!</p>
+  <h1>Perfect square divisors of 30!</h1>
+
+  <div class="problem">
+    <strong>The question</strong>
+    How many positive divisors of 30! are perfect squares? (30! means 30 &times; 29 &times; 28 &times; &hellip; &times; 2 &times; 1.)
+  </div>
+
+  <details class="reveal">
+  <summary>Hint 1</summary>
+  <div class="card">
+    <div class="card-head"><span class="card-num">08</span><span class="card-title">A perfect square uses only even powers</span></div>
+    <p>In a perfect square every prime appears an <strong>even</strong> number of times. So a square divisor picks an even power, 0, 2, 4, and so on, for each prime, up to that prime's power in the number. To find the powers inside a factorial, count multiples, as with the end zeros.</p>
+    <div class="math">72 = 2&sup3; &times; 3&sup2;
+power of 2:  0 or 2   (2 choices)
+power of 3:  0 or 2   (2 choices)
+2 &times; 2 = 4 square divisors: 1, 4, 9, 36</div>
+    <div class="card-tip">If a prime has power e, the even choices are 0, 2, 4, &hellip; up to e. That is (e &divide; 2, rounded down) + 1 choices.</div>
+  </div>
+  </details>
+
+  <details class="reveal">
+  <summary>Hint 2</summary>
+  <p>First find the power of each prime up to 29 inside 30!. For 2, count the multiples of 2, 4, 8 and 16 up to 30. Then count the even choices for each prime and multiply.</p>
+  </details>
+
+  <details class="reveal">
+  <summary>Step-by-step solution</summary>
+  <h2>Step by step</h2>
+  <ol class="steps">
+
+    <li>
+      <h3>List the primes in 30!</h3>
+      <p>Every prime up to 30 is a factor of 30!, and no bigger prime is.</p>
+      <div class="math">2, 3, 5, 7, 11, 13, 17, 19, 23, 29</div>
+    </li>
+
+    <li>
+      <h3>Find the power of 2</h3>
+      <p>Each multiple of 2 gives one 2. Each multiple of 4 gives a second 2, each multiple of 8 a third, and each multiple of 16 a fourth. Drop the remainders.</p>
+      <div class="math">30 &divide; 2  = 15
+30 &divide; 4  = 7
+30 &divide; 8  = 3
+30 &divide; 16 = 1
+total = 15 + 7 + 3 + 1 = 26</div>
+    </li>
+
+    <li>
+      <h3>Find the other powers</h3>
+      <p>Do the same for each prime.</p>
+      <div class="math">3:   10 + 3 + 1 = 14   (multiples of 3, 9, 27)
+5:   6 + 1 = 7         (multiples of 5, 25)
+7:   4                 (7, 14, 21, 28)
+11:  2                 (11, 22)
+13:  2                 (13, 26)
+17, 19, 23, 29:  1 each</div>
+    </li>
+
+    <li>
+      <h3>Write 30! as primes</h3>
+      <div class="math">30! = 2<sup>26</sup> &times; 3<sup>14</sup> &times; 5<sup>7</sup> &times; 7<sup>4</sup> &times; 11&sup2; &times; 13&sup2; &times; 17 &times; 19 &times; 23 &times; 29</div>
+    </li>
+
+    <li>
+      <h3>Count the even choices</h3>
+      <p>A prime with power 1 can only be used 0 times, so it gives just 1 choice.</p>
+      <div class="math">2:  0, 2, 4, &hellip;, 26    &rarr; 14 choices
+3:  0, 2, 4, &hellip;, 14    &rarr; 8 choices
+5:  0, 2, 4, 6        &rarr; 4 choices
+7:  0, 2, 4           &rarr; 3 choices
+11: 0, 2              &rarr; 2 choices
+13: 0, 2              &rarr; 2 choices
+17, 19, 23, 29: 0     &rarr; 1 choice each</div>
+    </li>
+
+    <li>
+      <h3>Multiply</h3>
+      <div class="math">14 &times; 8 = 112
+112 &times; 4 = 448
+448 &times; 3 = 1344
+1344 &times; 2 = 2688
+2688 &times; 2 = 5376</div>
+    </li>
+
+  </ol>
+
+  <div class="answer">5376 divisors of 30! are perfect squares.</div>
+
+  <div class="watch">
+    <p><strong>How to spot this type:</strong> &ldquo;how many divisors are perfect squares&rdquo; (or cubes). Get the prime powers first, then count only the powers that are multiples of 2 (or 3), including 0. A power of 7 gives 4 choices (0, 2, 4, 6), not 3.</p>
+  </div>
+  </details>
+
+  <div class="prevnext">
+    <a href="07-remainders-by-3.html">&larr; 7 &middot; Primes and remainders</a>
+    <a href="index.html">All cards &rarr;</a>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Problem 2 &middot; The primes inside 990</title>
+<link rel="stylesheet" href="style.css?v=4">
+</head>
+<body>
+<div class="wrap">
+
+  <nav class="pager">
+    <a class="home" href="index.html">All cards</a>
+    <a href="01-counting-primes.html">1 &middot; Counting primes</a>
+    <a class="here" href="02-prime-factors.html">2 &middot; Prime factors</a>
+    <a href="03-even-prime.html">3 &middot; The even prime</a>
+    <a href="04-counting-divisors.html">4 &middot; Counting factors</a>
+    <a href="05-factorial-zeros.html">5 &middot; Factorial zeros</a>
+    <a href="06-exactly-12-divisors.html">6 &middot; Exactly 12 factors</a>
+    <a href="07-remainders-by-3.html">7 &middot; Primes and remainders</a>
+    <a href="08-square-divisors.html">8 &middot; Square factors of 30!</a>
+  </nav>
+
+  <p class="eyebrow">Problem 2 &middot; Easy &middot; Prime factors</p>
+  <h1>The primes inside 990</h1>
+
+  <div class="problem">
+    <strong>The question</strong>
+    What is the sum of the distinct prime factors of 990?
+  </div>
+
+  <details class="reveal">
+  <summary>Hint 1</summary>
+  <div class="card">
+    <div class="card-head"><span class="card-num">02</span><span class="card-title">Break a number into primes</span></div>
+    <p>Divide by the smallest prime that goes in. Repeat with what is left until you reach 1. The primes you divided by are the <strong>prime factors</strong>. Every whole number above 1 breaks into primes in only one way.</p>
+    <div class="math"> 2 | 990
+ 3 | 495
+ 3 | 165
+ 5 |  55
+11 |  11
+   |   1</div>
+    <div class="card-tip">&ldquo;Distinct&rdquo; means different. If a prime shows up twice, count it only once.</div>
+  </div>
+  </details>
+
+  <details class="reveal">
+  <summary>Hint 2</summary>
+  <p>990 is even, so start by dividing by 2. Keep going until you reach 1. The prime 3 shows up twice, but you add it only once.</p>
+  </details>
+
+  <details class="reveal">
+  <summary>Step-by-step solution</summary>
+  <h2>Step by step</h2>
+  <ol class="steps">
+
+    <li>
+      <h3>Divide by 2</h3>
+      <p>990 is even.</p>
+      <div class="math">990 &divide; 2 = 495</div>
+    </li>
+
+    <li>
+      <h3>Divide by 3, twice</h3>
+      <p>The digits of 495 add to 4 + 9 + 5 = 18, a multiple of 3. The digits of 165 add to 12, so 3 goes in again.</p>
+      <div class="math">495 &divide; 3 = 165
+165 &divide; 3 = 55</div>
+    </li>
+
+    <li>
+      <h3>Divide by 5, then 11</h3>
+      <p>55 ends in 5. What is left, 11, is prime.</p>
+      <div class="math">55 &divide; 5 = 11
+11 &divide; 11 = 1</div>
+    </li>
+
+    <li>
+      <h3>Write the factorization</h3>
+      <p>Check it by multiplying back.</p>
+      <div class="math">990 = 2 &times; 3 &times; 3 &times; 5 &times; 11
+2 &times; 9 &times; 5 &times; 11 = 990, so it checks out</div>
+    </li>
+
+    <li>
+      <h3>Add the different primes</h3>
+      <p>The different primes are 2, 3, 5 and 11. Count 3 only once.</p>
+      <div class="math">2 + 3 + 5 + 11 = 21</div>
+    </li>
+
+  </ol>
+
+  <div class="answer">21</div>
+
+  <div class="watch">
+    <p><strong>How to spot this type:</strong> &ldquo;distinct prime factors&rdquo;. Factor completely, then list each prime once. If you add 3 twice you get 24, which is the trap answer.</p>
+  </div>
+  </details>
+
+  <div class="prevnext">
+    <a href="01-counting-primes.html">&larr; 1 &middot; Counting primes</a>
+    <a href="03-even-prime.html">3 &middot; The even prime &rarr;</a>
+  </div>
+
+</div>
+</body>
+</html>

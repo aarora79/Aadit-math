@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Problem 6 &middot; Smallest with 12 divisors</title>
+<link rel="stylesheet" href="style.css?v=4">
+</head>
+<body>
+<div class="wrap">
+
+  <nav class="pager">
+    <a class="home" href="index.html">All cards</a>
+    <a href="01-counting-primes.html">1 &middot; Counting primes</a>
+    <a href="02-prime-factors.html">2 &middot; Prime factors</a>
+    <a href="03-even-prime.html">3 &middot; The even prime</a>
+    <a href="04-counting-divisors.html">4 &middot; Counting factors</a>
+    <a href="05-factorial-zeros.html">5 &middot; Factorial zeros</a>
+    <a class="here" href="06-exactly-12-divisors.html">6 &middot; Exactly 12 factors</a>
+    <a href="07-remainders-by-3.html">7 &middot; Primes and remainders</a>
+    <a href="08-square-divisors.html">8 &middot; Square factors of 30!</a>
+  </nav>
+
+  <p class="eyebrow">Problem 6 &middot; Hard &middot; Exactly 12 factors</p>
+  <h1>Smallest with 12 divisors</h1>
+
+  <div class="problem">
+    <strong>The question</strong>
+    What is the smallest positive integer that has exactly 12 positive divisors?
+  </div>
+
+  <details class="reveal">
+  <summary>Hint 1</summary>
+  <div class="card">
+    <div class="card-head"><span class="card-num">06</span><span class="card-title">Work backward from the divisor count</span></div>
+    <p>If n = p<sup>a</sup> &times; q<sup>b</sup> &times; r<sup>c</sup>, then n has (a + 1)(b + 1)(c + 1) divisors. Split the target count into factors, subtract 1 from each to get powers, and give the <strong>biggest power to the smallest prime</strong>.</p>
+    <table><tr><th>6 =</th><th>powers</th><th>smallest n</th></tr><tr><td>6</td><td>5</td><td>2<sup>5</sup> = 32</td></tr><tr><td>3 &times; 2</td><td>2, 1</td><td>2&sup2; &times; 3 = 12</td></tr></table>
+    <div class="card-tip">Try every way to split the count. Splitting into more primes is often smaller, but check every option.</div>
+  </div>
+  </details>
+
+  <details class="reveal">
+  <summary>Hint 2</summary>
+  <p>12 can be written as 12, 6 &times; 2, 4 &times; 3 or 3 &times; 2 &times; 2. Each one gives a candidate number. Build the smallest one for each split and compare.</p>
+  </details>
+
+  <details class="reveal">
+  <summary>Step-by-step solution</summary>
+  <h2>Step by step</h2>
+  <ol class="steps">
+
+    <li>
+      <h3>Recall the rule</h3>
+      <p>From problem 4: if n = 2<sup>a</sup> &times; 3<sup>b</sup> &times; 5<sup>c</sup>, the number of divisors is (a + 1)(b + 1)(c + 1). We need this product to be 12.</p>
+    </li>
+
+    <li>
+      <h3>List the ways to make 12</h3>
+      <p>Order does not matter, and leave out factors of 1.</p>
+      <div class="math">12
+6 &times; 2
+4 &times; 3
+3 &times; 2 &times; 2</div>
+    </li>
+
+    <li>
+      <h3>Turn each way into powers</h3>
+      <p>Subtract 1 from each factor.</p>
+      <div class="math">12          &rarr;  power 11
+6 &times; 2       &rarr;  powers 5, 1
+4 &times; 3       &rarr;  powers 3, 2
+3 &times; 2 &times; 2   &rarr;  powers 2, 1, 1</div>
+    </li>
+
+    <li>
+      <h3>Build the smallest number for each</h3>
+      <p>Put the biggest power on 2, the next on 3, then 5. For example 2<sup>5</sup> &times; 3 = 96, but 3<sup>5</sup> &times; 2 = 486.</p>
+      <div class="math">2<sup>11</sup>           = 2048
+2<sup>5</sup> &times; 3       = 96
+2&sup3; &times; 3&sup2;      = 72
+2&sup2; &times; 3 &times; 5   = 60</div>
+    </li>
+
+    <li>
+      <h3>Pick the smallest</h3>
+      <div class="math">60</div>
+    </li>
+
+    <li>
+      <h3>Check</h3>
+      <p>List the divisors of 60.</p>
+      <div class="math">1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60   &rarr;  12</div>
+    </li>
+
+  </ol>
+
+  <div class="answer">60</div>
+
+  <div class="watch">
+    <p><strong>How to spot this type:</strong> &ldquo;smallest number with exactly N divisors&rdquo;. List every way to write N as a product, turn each into powers, and build the smallest number for each one. Do not stop after the first one you try.</p>
+  </div>
+  </details>
+
+  <div class="prevnext">
+    <a href="05-factorial-zeros.html">&larr; 5 &middot; Factorial zeros</a>
+    <a href="07-remainders-by-3.html">7 &middot; Primes and remainders &rarr;</a>
+  </div>
+
+</div>
+</body>
+</html>

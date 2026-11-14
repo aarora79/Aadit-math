@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A4 print: Problem 3 &middot; Two primes that add to 85</title>
+<link rel="stylesheet" href="print.css">
+</head>
+<body>
+<div class="wrap">
+
+
+  <p class="eyebrow">Problem 3 &middot; Easy &middot; The even prime</p>
+  <h1>Two primes that add to 85</h1>
+
+  <div class="problem">
+    <strong>The question</strong>
+    The sum of two prime numbers is 85. What is the product of these two primes?
+  </div>
+
+  <div class="card">
+    <div class="card-head"><span class="card-num">03</span><span class="card-title">2 is the only even prime</span></div>
+    <p>Every prime except 2 is odd. Odd + odd is always <strong>even</strong>. So if two primes add up to an odd number, one of them has to be 2.</p>
+    <table><tr><th>add</th><th>result</th></tr><tr><td>odd + odd</td><td>even</td></tr><tr><td>odd + even</td><td>odd</td></tr><tr><td>even + even</td><td>even</td></tr></table>
+    <div class="card-tip">When two primes add to an odd number, subtract 2 and check that what is left is prime.</div>
+  </div>
+
+
+  <h2>Step by step</h2>
+  <ol class="steps">
+
+    <li>
+      <h3>Look at odd and even</h3>
+      <p>Two odd numbers always add to an even number. For example 3 + 5 = 8.</p>
+    </li>
+
+    <li>
+      <h3>One prime must be 2</h3>
+      <p>85 is odd, so the two primes cannot both be odd. One of them is even. The only even prime is 2.</p>
+    </li>
+
+    <li>
+      <h3>Find the other prime</h3>
+      <div class="math">85 &minus; 2 = 83</div>
+    </li>
+
+    <li>
+      <h3>Check that 83 is prime</h3>
+      <p>Test the primes up to 7, because 11 &times; 11 = 121 is bigger than 83. 83 is odd. Its digits add to 11, so 3 does not go in. It does not end in 0 or 5. 7 &times; 11 = 77 and 7 &times; 12 = 84, so 7 does not go in. 83 is prime.</p>
+    </li>
+
+    <li>
+      <h3>Multiply</h3>
+      <div class="math">2 &times; 83 = 166</div>
+    </li>
+
+  </ol>
+
+  <div class="answer">The product is 166.</div>
+
+  <div class="watch">
+    <p><strong>How to spot this type:</strong> two primes with an odd sum (or an odd difference). One of them must be 2. The question asks for the product, so do not stop at 83.</p>
+  </div>
+
+
+</div>
+</body>
+</html>

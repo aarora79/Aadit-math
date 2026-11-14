@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Problem 1 &middot; Primes from 20 to 40</title>
+<link rel="stylesheet" href="style.css?v=4">
+</head>
+<body>
+<div class="wrap">
+
+  <nav class="pager">
+    <a class="home" href="index.html">All cards</a>
+    <a class="here" href="01-counting-primes.html">1 &middot; Counting primes</a>
+    <a href="02-prime-factors.html">2 &middot; Prime factors</a>
+    <a href="03-even-prime.html">3 &middot; The even prime</a>
+    <a href="04-counting-divisors.html">4 &middot; Counting factors</a>
+    <a href="05-factorial-zeros.html">5 &middot; Factorial zeros</a>
+    <a href="06-exactly-12-divisors.html">6 &middot; Exactly 12 factors</a>
+    <a href="07-remainders-by-3.html">7 &middot; Primes and remainders</a>
+    <a href="08-square-divisors.html">8 &middot; Square factors of 30!</a>
+  </nav>
+
+  <p class="eyebrow">Problem 1 &middot; Super easy &middot; Counting primes</p>
+  <h1>Primes from 20 to 40</h1>
+
+  <div class="problem">
+    <strong>The question</strong>
+    How many prime numbers are there between 20 and 40?
+  </div>
+
+  <details class="reveal">
+  <summary>Hint 1</summary>
+  <div class="card">
+    <div class="card-head"><span class="card-num">01</span><span class="card-title">A prime has exactly two factors</span></div>
+    <p>A <strong>prime</strong> has exactly two factors: 1 and itself. To test a number, divide it by the small primes 2, 3, 5, 7, and so on. Stop when the prime times itself is bigger than the number.</p>
+    <div class="math">Is 37 prime?
+37 &divide; 2   no
+37 &divide; 3   no
+37 &divide; 5   no
+7 &times; 7 = 49 is bigger than 37, so stop.
+37 is prime.</div>
+    <div class="card-tip">1 is not prime: it has only one factor. 2 is the only even prime.</div>
+  </div>
+  </details>
+
+  <details class="reveal">
+  <summary>Hint 2</summary>
+  <p>Every number from 21 to 39 is less than 7 &times; 7 = 49. So you only need to test 2, 3 and 5. Cross out the multiples of each one.</p>
+  </details>
+
+  <details class="reveal">
+  <summary>Step-by-step solution</summary>
+  <h2>Step by step</h2>
+  <ol class="steps">
+
+    <li>
+      <h3>List the numbers</h3>
+      <p>&ldquo;Between 20 and 40&rdquo; means 21 up to 39.</p>
+    </li>
+
+    <li>
+      <h3>Cross out the even numbers</h3>
+      <p>Even numbers divide by 2, so they are not prime. That leaves the odd numbers.</p>
+      <div class="math">21 23 25 27 29 31 33 35 37 39</div>
+    </li>
+
+    <li>
+      <h3>Cross out multiples of 3</h3>
+      <p>A number divides by 3 when its digits add up to a multiple of 3. 21, 27, 33 and 39 all do (2+1 = 3, 2+7 = 9, 3+3 = 6, 3+9 = 12).</p>
+      <div class="math">23 25 29 31 35 37</div>
+    </li>
+
+    <li>
+      <h3>Cross out multiples of 5</h3>
+      <p>Numbers ending in 5 divide by 5. That removes 25 and 35.</p>
+      <div class="math">23 29 31 37</div>
+    </li>
+
+    <li>
+      <h3>Why you can stop</h3>
+      <p>The next prime is 7, and 7 &times; 7 = 49 is bigger than 39. A number under 49 that is not prime must have a factor of 2, 3 or 5, and those are all crossed out already.</p>
+    </li>
+
+    <li>
+      <h3>Count</h3>
+      <div class="math">23, 29, 31, 37   &rarr;   4 primes</div>
+    </li>
+
+  </ol>
+
+  <div class="answer">There are 4 primes: 23, 29, 31 and 37.</div>
+
+  <div class="watch">
+    <p><strong>How to spot this type:</strong> &ldquo;how many primes&rdquo; in a range. Cross out multiples of 2, then 3, then 5, and keep going only while the prime squared is not bigger than the top of the range. Do not count 1 as prime.</p>
+  </div>
+  </details>
+
+  <div class="prevnext">
+    <a href="index.html">&larr; All cards</a>
+    <a href="02-prime-factors.html">2 &middot; Prime factors &rarr;</a>
+  </div>
+
+</div>
+</body>
+</html>
