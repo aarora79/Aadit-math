@@ -42,6 +42,17 @@ This is a static study site for a middle-school MATHCOUNTS student. GitHub Pages
 6. Add a card for the new set to `docs/index.html`.
 7. Add one new practice question per problem to the question bank (below).
 
+## Concept toolbox
+
+The home page has a "Concept toolbox" section of quick concept cards, one idea each, that are not tied to a problem set. Each card lives in `docs/concepts/`.
+
+1. Write `docs/concepts/topic-name.html`. Start with a `.card` holding the quick summary, then build the idea up from the basics in short numbered `<h2>` sections, with worked examples and figures where they help. End with "Check yourself" questions whose answers sit in `<details class="reveal">` with the summary `Show the answer`. Check every answer with a script.
+2. Link to the problem set pages that use the idea.
+3. Make the print copy in `docs/concepts/print/` with the same `sed` command as the problem sets, plus `-e '/A4 print version/d'`. Then change links to `../problem-set-...` into `../../problem-set-...`.
+4. Add a card for it to the toolbox grid in `docs/index.html`, numbered `C1`, `C2`, and so on.
+
+Formulas with a fraction use `<div class="formula">` with `<span class="frac"><span class="top">...</span><span class="bottom">...</span></span>`. Those styles are in `docs/concepts/style.css`, and also in `docs/problem-set-1/style.css`, which the home page uses.
+
 ## Question bank
 
 - `docs/question-bank/index.html` lists the practice questions. It is plain HTML.

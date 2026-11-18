@@ -361,3 +361,8 @@ details.reveal > p { margin: 10px 0 2px; }
 .figcap { font-size: 13px; color: #5A6E6D; margin: 6px 0 0; }
 
 .golink { background: var(--teal); color: #FFFFFF; border-radius: 999px; padding: 10px 20px; font-weight: 600; text-decoration: none; display: inline-block; }
+
+.formula { font-family: var(--mono); font-size: 20px; text-align: center; margin: 14px 0; color: var(--ink); }
+.frac { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; }
+.frac .top { border-bottom: 2px solid var(--ink); padding: 0 6px 4px; }
+.frac .bottom { padding-top: 4px; }

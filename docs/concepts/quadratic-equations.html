@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Concept toolbox &middot; Solving quadratic equations</title>
+<link rel="stylesheet" href="style.css?v=4">
+</head>
+<body>
+<div class="wrap">
+
+  <nav class="pager">
+    <a class="home" href="../index.html">Home</a>
+    <a class="here" href="quadratic-equations.html">Quadratic equations</a>
+  </nav>
+
+  <p class="eyebrow">Concept toolbox &middot; Algebra</p>
+  <h1>Solving quadratic equations</h1>
+  <p style="margin-top:10px">This page starts from what a quadratic is and builds up, one small step at a time, to the quadratic formula. By the end you will know where the formula comes from, not just what it says.</p>
+  <p style="font-size:14px"><a href="print/quadratic-equations.html" style="color:var(--teal);font-weight:600;text-decoration:none">A4 print version &rarr;</a></p>
+
+  <div class="card">
+    <div class="card-head"><span class="card-num">QC</span><span class="card-title">The quick card</span></div>
+    <p>A quadratic equation looks like <strong>ax&sup2; + bx + c = 0</strong>. Try to factor it first. If it will not factor, use the formula:</p>
+    <div class="formula">x = <span class="frac"><span class="top">&minus;b &plusmn; &radic;(b&sup2; &minus; 4ac)</span><span class="bottom">2a</span></span></div>
+    <div class="card-tip">The number under the square root, b&sup2; &minus; 4ac, tells you how many answers there are: two if it is positive, one if it is 0, none if it is negative.</div>
+  </div>
+
+  <h2>1 &middot; What a quadratic equation is</h2>
+  <p>A quadratic equation has an x&sup2; term and no higher power. Move every term to one side so the other side is 0. Then it looks like this:</p>
+  <div class="math">ax&sup2; + bx + c = 0
+
+2x&sup2; + 3x &minus; 2 = 0    &rarr;   a = 2,  b = 3,   c = &minus;2
+x&sup2; &minus; 9 = 0          &rarr;   a = 1,  b = 0,   c = &minus;9</div>
+  <p>The numbers a, b and c are called the <strong>coefficients</strong>. Keep the sign with each one: in 2x&sup2; + 3x &minus; 2, c is &minus;2, not 2. A quadratic usually has <strong>two</strong> answers, because two different numbers can have the same square: 3&sup2; = 9 and (&minus;3)&sup2; = 9.</p>
+
+  <h2>2 &middot; Method 1: factor</h2>
+  <p>If two numbers multiply to 0, at least one of them is 0. So if you can write the quadratic as (one bracket) &times; (another bracket) = 0, each bracket gives an answer.</p>
+  <p>For x&sup2; + bx + c, look for two numbers that <strong>multiply to c</strong> and <strong>add to b</strong>.</p>
+  <div class="math">x&sup2; + 6x + 5 = 0
+multiply to 5, add to 6:   1 and 5
+(x + 1)(x + 5) = 0
+x + 1 = 0   or   x + 5 = 0
+x = &minus;1      or   x = &minus;5</div>
+  <p>Factoring is the fastest method when it works. But many quadratics, like x&sup2; + 4x + 1 = 0, have no whole numbers that fit. For those you need a method that always works.</p>
+
+  <h2>3 &middot; Method 2: complete the square</h2>
+  <p>The idea: if one side is a perfect square, like (x + 3)&sup2;, you can undo the square with a square root. Here is how to turn x&sup2; + 6x into a perfect square, using a picture.</p>
+  <p>Draw x&sup2; as a square with side x. Split 6x into two strips, each 3 by x, and put one on the right and one along the bottom.</p>
+  <div class="figure"><svg viewBox="40 0 350 300" width="350" height="300" role="img" aria-label="Square of side x with two strips of 3 by x and a missing 3 by 3 corner"><rect x="100" y="50" width="150" height="150" style="fill:var(--teal-pale);stroke:var(--ink);stroke-width:2"/><rect x="250" y="50" width="60" height="150" style="fill:#FFFFFF;stroke:var(--ink);stroke-width:2"/><rect x="100" y="200" width="150" height="60" style="fill:#FFFFFF;stroke:var(--ink);stroke-width:2"/><rect x="250" y="200" width="60" height="60" style="fill:var(--yellow);stroke:var(--ink);stroke-width:2;stroke-dasharray:6 4"/><text x="175.0" y="121.0" font-size="16" font-family="monospace" font-weight="700" text-anchor="middle">x&sup2;</text><text x="175.0" y="139.0" font-size="12" font-family="monospace" text-anchor="middle">x &times; x</text><text x="280.0" y="121.0" font-size="16" font-family="monospace" font-weight="700" text-anchor="middle">3x</text><text x="280.0" y="139.0" font-size="12" font-family="monospace" text-anchor="middle">3 &times; x</text><text x="175.0" y="226.0" font-size="16" font-family="monospace" font-weight="700" text-anchor="middle">3x</text><text x="175.0" y="244.0" font-size="12" font-family="monospace" text-anchor="middle">x &times; 3</text><text x="280.0" y="226.0" font-size="16" font-family="monospace" font-weight="700" text-anchor="middle">?</text><text x="280.0" y="244.0" font-size="12" font-family="monospace" text-anchor="middle">3 &times; 3</text><line x1="102.0" y1="34.0" x2="248.0" y2="34.0" style="stroke:var(--teal);stroke-width:1.5"/><polygon points="248.0,34.0 240.0,38.0 240.0,30.0" style="fill:var(--teal);stroke:none"/><polygon points="102.0,34.0 110.0,30.0 110.0,38.0" style="fill:var(--teal);stroke:none"/><text x="175.0" y="25.0" font-size="15" font-family="monospace" font-weight="700" text-anchor="middle">x</text><line x1="252.0" y1="34.0" x2="308.0" y2="34.0" style="stroke:var(--teal);stroke-width:1.5"/><polygon points="308.0,34.0 300.0,38.0 300.0,30.0" style="fill:var(--teal);stroke:none"/><polygon points="252.0,34.0 260.0,30.0 260.0,38.0" style="fill:var(--teal);stroke:none"/><text x="280.0" y="25.0" font-size="15" font-family="monospace" font-weight="700" text-anchor="middle">3</text><line x1="102.0" y1="276.0" x2="248.0" y2="276.0" style="stroke:var(--teal);stroke-width:1.5"/><polygon points="248.0,276.0 240.0,280.0 240.0,272.0" style="fill:var(--teal);stroke:none"/><polygon points="102.0,276.0 110.0,272.0 110.0,280.0" style="fill:var(--teal);stroke:none"/><text x="175.0" y="295.0" font-size="15" font-family="monospace" font-weight="700" text-anchor="middle">x</text><line x1="252.0" y1="276.0" x2="308.0" y2="276.0" style="stroke:var(--teal);stroke-width:1.5"/><polygon points="308.0,276.0 300.0,280.0 300.0,272.0" style="fill:var(--teal);stroke:none"/><polygon points="252.0,276.0 260.0,272.0 260.0,280.0" style="fill:var(--teal);stroke:none"/><text x="280.0" y="295.0" font-size="15" font-family="monospace" font-weight="700" text-anchor="middle">3</text><line x1="84.0" y1="52.0" x2="84.0" y2="198.0" style="stroke:var(--teal);stroke-width:1.5"/><polygon points="84.0,198.0 80.0,190.0 88.0,190.0" style="fill:var(--teal);stroke:none"/><polygon points="84.0,52.0 88.0,60.0 80.0,60.0" style="fill:var(--teal);stroke:none"/><text x="70.0" y="130.0" font-size="15" font-family="monospace" font-weight="700" text-anchor="middle">x</text><line x1="84.0" y1="202.0" x2="84.0" y2="258.0" style="stroke:var(--teal);stroke-width:1.5"/><polygon points="84.0,258.0 80.0,250.0 88.0,250.0" style="fill:var(--teal);stroke:none"/><polygon points="84.0,202.0 88.0,210.0 80.0,210.0" style="fill:var(--teal);stroke:none"/><text x="70.0" y="235.0" font-size="15" font-family="monospace" font-weight="700" text-anchor="middle">3</text><line x1="326.0" y1="52.0" x2="326.0" y2="198.0" style="stroke:var(--teal);stroke-width:1.5"/><polygon points="326.0,198.0 322.0,190.0 330.0,190.0" style="fill:var(--teal);stroke:none"/><polygon points="326.0,52.0 330.0,60.0 322.0,60.0" style="fill:var(--teal);stroke:none"/><text x="340.0" y="130.0" font-size="15" font-family="monospace" font-weight="700" text-anchor="middle">x</text><line x1="326.0" y1="202.0" x2="326.0" y2="258.0" style="stroke:var(--teal);stroke-width:1.5"/><polygon points="326.0,258.0 322.0,250.0 330.0,250.0" style="fill:var(--teal);stroke:none"/><polygon points="326.0,202.0 330.0,210.0 322.0,210.0" style="fill:var(--teal);stroke:none"/><text x="340.0" y="235.0" font-size="15" font-family="monospace" font-weight="700" text-anchor="middle">3</text></svg><p class="figcap">x&sup2; + 6x drawn as a square x by x and two strips 3 by x. The dashed corner is missing, so the shape is not yet a full square. Not to scale.</p></div>
+  <p>The corner is missing. It is 3 by 3, so it has area 9. Add 9 and the shape becomes a full square with side x + 3.</p>
+  <div class="figure"><svg viewBox="40 0 350 300" width="350" height="300" role="img" aria-label="Full square of side x plus 3, made of x squared, two strips of 3x and a corner of 9"><rect x="100" y="50" width="150" height="150" style="fill:var(--teal-pale);stroke:var(--ink);stroke-width:2"/><rect x="250" y="50" width="60" height="150" style="fill:#FFFFFF;stroke:var(--ink);stroke-width:2"/><rect x="100" y="200" width="150" height="60" style="fill:#FFFFFF;stroke:var(--ink);stroke-width:2"/><rect x="250" y="200" width="60" height="60" style="fill:var(--yellow);stroke:var(--ink);stroke-width:2;stroke-dasharray:6 4"/><text x="175.0" y="121.0" font-size="16" font-family="monospace" font-weight="700" text-anchor="middle">x&sup2;</text><text x="175.0" y="139.0" font-size="12" font-family="monospace" text-anchor="middle">x &times; x</text><text x="280.0" y="121.0" font-size="16" font-family="monospace" font-weight="700" text-anchor="middle">3x</text><text x="280.0" y="139.0" font-size="12" font-family="monospace" text-anchor="middle">3 &times; x</text><text x="175.0" y="226.0" font-size="16" font-family="monospace" font-weight="700" text-anchor="middle">3x</text><text x="175.0" y="244.0" font-size="12" font-family="monospace" text-anchor="middle">x &times; 3</text><text x="280.0" y="226.0" font-size="16" font-family="monospace" font-weight="700" text-anchor="middle">9</text><text x="280.0" y="244.0" font-size="12" font-family="monospace" text-anchor="middle">3 &times; 3</text><line x1="102.0" y1="34.0" x2="248.0" y2="34.0" style="stroke:var(--teal);stroke-width:1.5"/><polygon points="248.0,34.0 240.0,38.0 240.0,30.0" style="fill:var(--teal);stroke:none"/><polygon points="102.0,34.0 110.0,30.0 110.0,38.0" style="fill:var(--teal);stroke:none"/><text x="175.0" y="25.0" font-size="15" font-family="monospace" font-weight="700" text-anchor="middle">x</text><line x1="252.0" y1="34.0" x2="308.0" y2="34.0" style="stroke:var(--teal);stroke-width:1.5"/><polygon points="308.0,34.0 300.0,38.0 300.0,30.0" style="fill:var(--teal);stroke:none"/><polygon points="252.0,34.0 260.0,30.0 260.0,38.0" style="fill:var(--teal);stroke:none"/><text x="280.0" y="25.0" font-size="15" font-family="monospace" font-weight="700" text-anchor="middle">3</text><line x1="102.0" y1="276.0" x2="248.0" y2="276.0" style="stroke:var(--teal);stroke-width:1.5"/><polygon points="248.0,276.0 240.0,280.0 240.0,272.0" style="fill:var(--teal);stroke:none"/><polygon points="102.0,276.0 110.0,272.0 110.0,280.0" style="fill:var(--teal);stroke:none"/><text x="175.0" y="295.0" font-size="15" font-family="monospace" font-weight="700" text-anchor="middle">x</text><line x1="252.0" y1="276.0" x2="308.0" y2="276.0" style="stroke:var(--teal);stroke-width:1.5"/><polygon points="308.0,276.0 300.0,280.0 300.0,272.0" style="fill:var(--teal);stroke:none"/><polygon points="252.0,276.0 260.0,272.0 260.0,280.0" style="fill:var(--teal);stroke:none"/><text x="280.0" y="295.0" font-size="15" font-family="monospace" font-weight="700" text-anchor="middle">3</text><line x1="84.0" y1="52.0" x2="84.0" y2="198.0" style="stroke:var(--teal);stroke-width:1.5"/><polygon points="84.0,198.0 80.0,190.0 88.0,190.0" style="fill:var(--teal);stroke:none"/><polygon points="84.0,52.0 88.0,60.0 80.0,60.0" style="fill:var(--teal);stroke:none"/><text x="70.0" y="130.0" font-size="15" font-family="monospace" font-weight="700" text-anchor="middle">x</text><line x1="84.0" y1="202.0" x2="84.0" y2="258.0" style="stroke:var(--teal);stroke-width:1.5"/><polygon points="84.0,258.0 80.0,250.0 88.0,250.0" style="fill:var(--teal);stroke:none"/><polygon points="84.0,202.0 88.0,210.0 80.0,210.0" style="fill:var(--teal);stroke:none"/><text x="70.0" y="235.0" font-size="15" font-family="monospace" font-weight="700" text-anchor="middle">3</text><line x1="326.0" y1="52.0" x2="326.0" y2="198.0" style="stroke:var(--teal);stroke-width:1.5"/><polygon points="326.0,198.0 322.0,190.0 330.0,190.0" style="fill:var(--teal);stroke:none"/><polygon points="326.0,52.0 330.0,60.0 322.0,60.0" style="fill:var(--teal);stroke:none"/><text x="340.0" y="130.0" font-size="15" font-family="monospace" font-weight="700" text-anchor="middle">x</text><line x1="326.0" y1="202.0" x2="326.0" y2="258.0" style="stroke:var(--teal);stroke-width:1.5"/><polygon points="326.0,258.0 322.0,250.0 330.0,250.0" style="fill:var(--teal);stroke:none"/><polygon points="326.0,202.0 330.0,210.0 322.0,210.0" style="fill:var(--teal);stroke:none"/><text x="340.0" y="235.0" font-size="15" font-family="monospace" font-weight="700" text-anchor="middle">3</text></svg><p class="figcap">Adding the 3 by 3 corner, area 9, makes a full square with side x + 3. So x&sup2; + 6x + 9 = (x + 3)&sup2;. Not to scale.</p></div>
+  <p>Now solve x&sup2; + 6x + 5 = 0 this way. Whatever you add to one side, add to the other side too.</p>
+  <div class="math">x&sup2; + 6x + 5 = 0
+x&sup2; + 6x     = &minus;5            move the 5 across
+x&sup2; + 6x + 9 = &minus;5 + 9        add the missing corner, 9
+(x + 3)&sup2;    = 4             the left side is now a square
+x + 3        = 2  or  &minus;2     square root, both signs
+x            = &minus;1 or &minus;5     subtract 3</div>
+  <p>The same answers as factoring. The corner is always <strong>(half of b)&sup2;</strong>: here half of 6 is 3, and 3&sup2; = 9.</p>
+
+  <h2>4 &middot; Where the formula comes from</h2>
+  <p>Now do exactly the same steps with letters instead of numbers. Every step is one you just did in section 3.</p>
+  <div class="math">ax&sup2; + bx + c = 0
+
+step 1  divide by a, so x&sup2; has no number in front:
+        x&sup2; + (b/a)x + c/a = 0
+
+step 2  move c/a across:
+        x&sup2; + (b/a)x = &minus;c/a
+
+step 3  half of b/a is b/(2a). Add its square to both sides:
+        x&sup2; + (b/a)x + b&sup2;/(4a&sup2;) = b&sup2;/(4a&sup2;) &minus; c/a
+
+step 4  the left side is a square. Put the right side over 4a&sup2;:
+        (x + b/(2a))&sup2; = (b&sup2; &minus; 4ac)/(4a&sup2;)
+
+step 5  square root, both signs. &radic;(4a&sup2;) = 2a:
+        x + b/(2a) = &plusmn;&radic;(b&sup2; &minus; 4ac) / (2a)
+
+step 6  subtract b/(2a):
+        x = (&minus;b &plusmn; &radic;(b&sup2; &minus; 4ac)) / (2a)</div>
+  <p>That last line is the <strong>quadratic formula</strong>:</p>
+  <div class="formula">x = <span class="frac"><span class="top">&minus;b &plusmn; &radic;(b&sup2; &minus; 4ac)</span><span class="bottom">2a</span></span></div>
+  <p>In step 4, c/a became 4ac/(4a&sup2;) so both parts share the same bottom. That is the only new trick.</p>
+
+  <h2>5 &middot; Using the formula</h2>
+  <p>Write down a, b and c with their signs, put them into the formula, and work out the part under the root first.</p>
+  <div class="math">2x&sup2; + 3x &minus; 2 = 0       a = 2,  b = 3,  c = &minus;2
+
+under the root:  b&sup2; &minus; 4ac = 3&sup2; &minus; 4 &times; 2 &times; (&minus;2) = 9 + 16 = 25
+&radic;25 = 5
+
+x = (&minus;3 + 5) / 4 = 2/4 = 1/2
+x = (&minus;3 &minus; 5) / 4 = &minus;8/4 = &minus;2</div>
+  <p>And one that does not factor:</p>
+  <div class="math">x&sup2; + 4x + 1 = 0          a = 1,  b = 4,  c = 1
+
+under the root:  4&sup2; &minus; 4 &times; 1 &times; 1 = 16 &minus; 4 = 12
+&radic;12 = &radic;4 &times; &radic;3 = 2&radic;3
+
+x = (&minus;4 &plusmn; 2&radic;3) / 2 = &minus;2 &plusmn; &radic;3
+x &asymp; &minus;0.27  or  x &asymp; &minus;3.73</div>
+  <div class="watch">
+    <p><strong>Watch the signs:</strong> when c is negative, &minus;4ac becomes positive, as in 9 + 16 above. And &minus;b means &ldquo;the opposite of b&rdquo;: if b = &minus;5, then &minus;b = 5.</p>
+  </div>
+
+  <h2>6 &middot; How many answers? Look under the root</h2>
+  <p>The part under the square root, <strong>b&sup2; &minus; 4ac</strong>, is called the <strong>discriminant</strong>. You can check it before doing any other work.</p>
+  <table>
+    <tr><th>b&sup2; &minus; 4ac</th><th>answers</th><th>example</th></tr>
+    <tr><td>positive</td><td>two</td><td>x&sup2; + 6x + 5: 36 &minus; 20 = 16</td></tr>
+    <tr><td>zero</td><td>one</td><td>x&sup2; &minus; 6x + 9: 36 &minus; 36 = 0, so x = 3</td></tr>
+    <tr><td>negative</td><td>none</td><td>x&sup2; + 2x + 5: 4 &minus; 20 = &minus;16</td></tr>
+  </table>
+  <p>A negative number has no real square root, because any real number squared is 0 or more. So a negative discriminant means no real answers.</p>
+
+  <h2>7 &middot; Which method should I use?</h2>
+  <table>
+    <tr><th>if you see</th><th>use</th></tr>
+    <tr><td>small whole numbers that multiply to c and add to b</td><td>factoring</td></tr>
+    <tr><td>no x term, like x&sup2; = 49</td><td>square root of both sides: x = 7 or &minus;7</td></tr>
+    <tr><td>anything else</td><td>the quadratic formula</td></tr>
+  </table>
+  <p>Always check which answers make sense. A length, a time or an age cannot be negative, so in a word problem you often throw one answer away.</p>
+  <p>Where this shows up: <a href="../problem-set-1/03-rate-time.html">set 1, problem 3</a> (running speeds) and <a href="../problem-set-2/01-ages.html">set 2, problem 1</a> (ages).</p>
+
+  <h2>Check yourself</h2>
+  <p><strong>1.</strong> Solve x&sup2; &minus; 2x &minus; 15 = 0 by factoring.</p>
+  <details class="reveal">
+  <summary>Show the answer</summary>
+  <div class="math">multiply to &minus;15, add to &minus;2:   &minus;5 and 3
+(x &minus; 5)(x + 3) = 0   &rarr;   x = 5 or x = &minus;3</div>
+  </details>
+  <p><strong>2.</strong> Solve x&sup2; + 8x &minus; 9 = 0 by completing the square.</p>
+  <details class="reveal">
+  <summary>Show the answer</summary>
+  <div class="math">x&sup2; + 8x = 9
+half of 8 is 4, and 4&sup2; = 16:   x&sup2; + 8x + 16 = 9 + 16
+(x + 4)&sup2; = 25
+x + 4 = 5 or &minus;5   &rarr;   x = 1 or x = &minus;9</div>
+  </details>
+  <p><strong>3.</strong> Solve 3x&sup2; &minus; 5x &minus; 2 = 0 with the formula.</p>
+  <details class="reveal">
+  <summary>Show the answer</summary>
+  <div class="math">a = 3,  b = &minus;5,  c = &minus;2
+b&sup2; &minus; 4ac = 25 &minus; 4 &times; 3 &times; (&minus;2) = 25 + 24 = 49,  &radic;49 = 7
+x = (5 + 7) / 6 = 2
+x = (5 &minus; 7) / 6 = &minus;2/6 = &minus;1/3</div>
+  </details>
+  <p><strong>4.</strong> Without solving, how many answers does x&sup2; + 2x + 5 = 0 have?</p>
+  <details class="reveal">
+  <summary>Show the answer</summary>
+  <div class="math">b&sup2; &minus; 4ac = 4 &minus; 20 = &minus;16, which is negative, so no real answers</div>
+  </details>
+
+  <div class="prevnext">
+    <a href="../index.html">&larr; Home</a>
+    <span></span>
+  </div>
+
+</div>
+</body>
+</html>
